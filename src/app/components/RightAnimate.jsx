@@ -71,7 +71,7 @@ const HeroRightImages = () => {
         style={{ transformStyle: "preserve-3d" }}
       >
         <img
-          src="/hero-image.jpg"
+          src="/hero-image.png"
           alt="Cyber Insurability"
           className="w-full h-full object-contain rounded-lg shadow-lg"
         />
