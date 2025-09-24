@@ -1,19 +1,31 @@
-         "use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ButtonSection from "./wrapping/AnimateButton";
 import HeroRightImages from "./RightAnimate";
 import "react-multi-carousel/lib/styles.css"
+import HeroRightSection from "./HeroRightSection";
  
 const Hero = () => {
-  const texts = [
-    "Instant payments",
-    "No chargebacks",
+ 
+ 
+ 
+  // const texts = [
+  //   "Instant payments",
+  //   "No chargebacks",
    
-    "Lower transaction fees",
-    "Seamless experience",
-    "Increase conversions",
-  ];
+  //   "Lower transaction fees",
+  //   "Seamless experience",
+  //   "Increase conversions",
+  // ];
+ 
+const texts = [
+  "Boost Cyber Score",
+  "Negotiate Premiums",
+  "Benchmark Your SME",
+  "Reduce Coverage Risk",
+  "Understand Insurability"
+];
  
  
 const transactionCards = [
@@ -39,6 +51,9 @@ const responsive = {
 };
  
  
+ 
+ 
+ 
   const [index, setIndex] = useState(0);
  
   useEffect(() => {
@@ -50,15 +65,23 @@ const responsive = {
  
   return (
     <div className="block">
-  <section className="w-full min-h-screen bg-white flex items-center justify-center px-2 sm:px-6 lg:px-4 overflow-x-hidden">
+ 
+ 
+    <section className="w-full py-[12rem] bg-white flex items-center justify-center px-2 sm:px-6 lg:px-4 overflow-x-hidden">
+ 
+ 
         <div className="max-w-12xl w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-8">
        
         {/* LEFT TEXT */}
         <div className="flex-1 lg:flex-[0_0_50%] space-y-4 sm:space-y-5 md:space-y-6
                     pr-2 sm:pr-4 md:pr-4 lg:pr-10 pl-2 sm:pl-4 md:pl-6 lg:pl-10 max-w-full">
+ 
+ 
+ 
+               
          
           {/* Animated headline */}
-       <div className="relative max-w-[1380px] overflow-hidden mb-0">
+<div className="relative max-w-[1380px] mb-4">
   <AnimatePresence mode="wait">
     <motion.h1
       key={index}
@@ -67,15 +90,14 @@ const responsive = {
       exit={{ y: -20, opacity: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
       className="
-        hero-heading
+        hero-heading  
         w-full
-        text-[3rem] md:text-[3.5rem] lg:text-[3.8rem] xl:text-[4.1rem]
+        text-[3rem] sm:text-[3.2rem] md:text-[3.5rem] lg:text-[3.8rem] xl:text-[4.2rem]
         font-normal
-        leading-[1.1] md:leading-[1.1] lg:leading-[1.05]
+        leading-[1.1] md:leading-[1.1] lg:leading-[1.03]
         tracking-[-0.02em]
         text-[#2d1f6b]
         whitespace-normal break-words
-        max-[480px]:text-[2.5rem] max-[480px]:leading-[1.2]
       "
     >
       {texts[index]}
@@ -85,18 +107,16 @@ const responsive = {
  
  
  
- 
- 
           {/* Highlight heading */}
         <h1
   className=" hero-heading relative text-[2.8rem] md:text-[3.5rem] xl:text-[4.4rem]
              
              font-normal leading-[1] tracking-[-0.03em] text-gray-900 whitespace-nowrap max-[480px]:whitespace-normal break-words "
 >
-            with{" "}
+       with{" "}
             <span   className="relative inline-block text-[2.8rem] md:text-[3.5rem] xl:text-[4.9rem]
              ">
-              Open Banking
+           Lexi Rating™
               <svg
                 className="absolute left-0 bottom--1 w-full h-6"
                 viewBox="0 0 448 26"
@@ -126,11 +146,10 @@ const responsive = {
           </h1>
  
           {/* Description */}
-         <div className="w-full md:w-[65%]">
+         <div className="w-full md:w-[70%]">
   <p className="text-[#52606d] text-[1.1rem] sm:text-[1.15rem] md:text-[1.2rem] lg:text-[1.25rem]
                 leading-[1.5]">
-    Our advanced technology and secure systems provide a safe and reliable way to transfer funds,
-    allowing you to benefit from reduced processing times and improved efficiency.
+SMEs without a Lexi Rating™ may face higher premiums or outright denials.Before you apply for cyber insurance, know exactly how you’ll be judged. Get your Lexi Rating now - See what insurers see, before they do!
   </p>
 </div>
  
@@ -141,13 +160,14 @@ const responsive = {
  
 <div className="w-full lg:flex-[0_0_50%] relative mt-6 lg:mt-0 flex-grow lg:mr-8">
  
+    {/* <HeroRightSection /> */}
     <HeroRightImages />
  
 </div>
  
  
          
-          {/* <HeroRightImages /> */}
+         
  
  
  
@@ -209,3 +229,4 @@ const responsive = {
 };
  
 export default Hero;
+ 

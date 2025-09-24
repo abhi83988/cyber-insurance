@@ -83,9 +83,9 @@ export default function CardFees() {
   return (
  
     <div className="min-h-195 sm:min-h-190 bg-[#0C1B28] h-100 text-white flex items-evenly justify-center rounded-4xl px-8 py-16 abhusection">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-12">
         {/* Mobile Version */}
-        <div className="flex flex-col block sm:hidden justify-between h-full relative">
+        <div className="flex flex-col block md:hidden justify-between h-full relative">
  
           <div>
             <h1
@@ -145,21 +145,21 @@ export default function CardFees() {
             <img
               src="/cardfees.png"
               alt="Credit Card 1"
-              className="image w-50 h-40 z-20 transform translate-y-8 -mr-16"
+              className="image w-50 h-40 sm:w-35 sm:h-50 z-20 transform translate-y-8 -mr-16"
             />
             <img
               src="/cardfees.png"
               alt="Credit Card 2"
-              className="image w-50 h-40 z-10 transform -translate-y-15"
+              className="image w-50 h-40 sm:w-35 sm:h-50 z-10 transform -translate-y-15"
             />
           </div>
         </div>
         <div className="flex-1 sm:h-[600px] h-[400px] overflow-hidden relative align-self-end">
-          <div className="flex items-center animate-marquee space-x-6 absolute top-20 left-0 sm:top-40">
+          <div className="flex items-center animate-marquee space-x-6 absolute top-20 left-0 md:top-40">
             {cardData.concat(cardData).map((card, index) => (
               <div
                 key={index}
-                className="card bg-[#B8E3E3] text-[#1D2C3C] p-6 rounded-2xl shadow-xl w-100 h-70  flex-shrink-0"
+                className="card bg-[#B8E3E3] text-[#1D2C3C] p-6 rounded-2xl shadow-xl w-100 h-50 md:w-100 md:h-70 flex-shrink-0"
               >
                 <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
                 <p className="text-base">{card.description}</p>
@@ -167,7 +167,7 @@ export default function CardFees() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col hidden sm:block justify-between h-150 relative sm:w-80 lg:w-100 xl:w-200">
+        <div className="flex flex-col hidden md:block justify-between h-150 relative sm:w-80 lg:w-100 xl:w-150 2xl:w-200">
  
           <div className="sm:ml-0 lg:ml-0 xl:ml-10 ">
             <h1
@@ -221,7 +221,7 @@ export default function CardFees() {
               that are settled in seconds.
             </p>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-between items-end  sm:flex-col sm:gap-30 lg:sm:flex-col lg:gap-10 xl:flex-row xl:justify-between xl:items-end xl:gap-7 p-4">
+          <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-between items-end  sm:flex-col sm:gap-30 lg:flex-col lg:gap-10 xl:flex-col xl:justify-between xl:items-start 2xl:flex-row 2xl:justify-between 2xl:items-end  p-4">
  
             <div className="flex flex-row relative sm:ml-0 lg:ml-0 xl:ml-10">
               <img
@@ -235,7 +235,7 @@ export default function CardFees() {
                 className="image sm:w-55 sm:h-60  lg:w-55 lg:h-70 xl:w-55 xl:h-80 z-10 transform -translate-y-15"
               />
             </div>
-            <div>
+            <div className='xl:ml-90 2xl:ml-0'>
               <ButtonSection />
             </div>
           </div>
@@ -244,5 +244,4 @@ export default function CardFees() {
     </div>
   );
 }
- 
  
