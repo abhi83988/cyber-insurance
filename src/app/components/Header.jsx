@@ -70,7 +70,7 @@ export default function Header() {
 <div className="h-16 relative w-full flex items-center justify-between px-4 md:px-6">
         {/* Logo */}
 <div className="flex items-center">
-<img src="/assets/logo.svg" alt="Logo" className="h-8 w-auto" />
+<img src="/assets/logo2.svg" alt="Logo" className="h-10 w-auto" />
 </div>
  
         {/* Desktop nav */}

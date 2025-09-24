@@ -9,9 +9,9 @@ export default function Footer2() {
         {/* Left: Logo */}
         <div className="flex items-center">
           <img
-            src="/assets/logo.svg"
+            src="/assets/logo2.svg"
             alt="Company Logo"
-            className="h-8 w-auto"
+            className="h-10 w-auto"
           />
         </div>
 
