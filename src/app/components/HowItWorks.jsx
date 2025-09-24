@@ -2,9 +2,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
+ 
 gsap.registerPlugin(ScrollTrigger);
-
+ 
 const steps = [
   {
     title: "Answer a Few Questions",
@@ -27,14 +27,14 @@ const steps = [
     color: "bg-[#d34a99]",
   },
 ];
-
+ 
 // Custom Arrow SVG Component
 const ArrowSVG = ({ direction = "right" }) => {
   let transform = "";
   if (direction === "down") transform = "rotate(90 24 19)";
   if (direction === "left") transform = "rotate(180 24 19)";
   if (direction === "up") transform = "rotate(-90 24 19)";
-
+ 
   return (
     <svg
       width="40"
@@ -54,11 +54,11 @@ const ArrowSVG = ({ direction = "right" }) => {
     </svg>
   );
 };
-
+ 
 export default function HowItWorks() {
   const cardsRef = useRef([]);
   const headingRef = useRef(null);
-
+ 
   useEffect(() => {
     // Animate heading
     gsap.fromTo(
@@ -76,7 +76,7 @@ export default function HowItWorks() {
         },
       }
     );
-
+ 
     // Animate cards
     cardsRef.current.forEach((card) => {
       gsap.fromTo(
@@ -94,7 +94,7 @@ export default function HowItWorks() {
           },
         }
       );
-
+ 
       card.addEventListener("mouseenter", () => {
         gsap.to(card, { scale: 1.05, duration: 0.3, ease: "power3.out" });
       });
@@ -103,20 +103,20 @@ export default function HowItWorks() {
       });
     });
   }, []);
-
+ 
   return (
     <div className="w-full flex flex-col items-center py-12 bg-[#f5f7fa]">
       <h2 ref={headingRef} className="text-4xl font-bold mb-20 sm:mb-10 lg:text-[3rem] md:text-[2rem]">
         How are you
       </h2>
-
+ 
       {/* Container */}
-      <div className="flex flex-wrap flex-col sm:flex-row justify-center items-center gap-x-28 gap-y-35 md:grid md:grid-cols-2 md:gap-x-28 md:gap-y-24 lg:flex-row lg:gap-x-28 lg:gap-y-24 xl:flex xl:flex-row">
+      <div className="flex flex-wrap flex-col sm:flex-row justify-center items-center gap-x-28 gap-y-35 md:grid md:grid-cols-2 md:gap-x-28 md:gap-y-24 lg:flex-row lg:gap-x-28 lg:gap-y-24  xl:flex xl:flex-row xl:gap-22">
         {steps.map((step, index) => (
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="relative group w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] flex-shrink-0 flex flex-col items-center justify-center"
+            className="relative group w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] xl:w-[250px] xl:h-[320px] 2xl:w-[300px] 2xl:h-[300px] flex-shrink-0 flex flex-col items-center justify-center"
           >
             {/* Card */}
             <div className="bg-white w-70 h-80 rounded-3xl p-6 flex flex-col items-center text-center sm:w-full sm:h-full ">
@@ -124,12 +124,12 @@ export default function HowItWorks() {
                 <div className="mb-4 bg-white p-4 rounded-full">
                   <img src="/Union.svg" alt="question" className="w-12 h-12" />
                 </div>
-
+ 
               </div>
               <h3 className="font-semibold text-base mb-1 mt-6">{step.title}</h3>
               <p className="text-sm text-[#1f1f1f] mb-6">{step.desc}</p>
             </div>
-
+ 
             {/* Arrows */}
             {index < steps.length - 1 && (
               <>
@@ -137,14 +137,20 @@ export default function HowItWorks() {
                 <div className="hidden xl:block absolute top-1/2 -right-[80px] transform -translate-y-1/2">
                   <ArrowSVG direction="right" />
                 </div>
-
+                {/* Laptop  → */}
+                {/* {index % 2 === 0 && (
+                  <div className="hidden xl:block absolute top-1/2 -right-[80px] transform -translate-y-1/2">
+                    <ArrowSVG direction="right" />
+                  </div>
+                )} */}
+ 
                 {/* Tablet → */}
                 {index % 2 === 0 && (
                   <div className="hidden sm:block xl:hidden absolute top-1/2 -right-[80px] transform -translate-y-1/2">
                     <ArrowSVG direction="right" />
                   </div>
                 )}
-
+ 
                 {/* Mobile ↓ */}
                 <div className="block sm:hidden absolute -bottom-[90px] left-1/2 transform -translate-x-1/2">
                   <ArrowSVG direction="down" />
@@ -154,7 +160,8 @@ export default function HowItWorks() {
           </div>
         ))}
       </div>
-
+ 
     </div>
   );
 }
+ 
