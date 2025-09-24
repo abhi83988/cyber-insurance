@@ -60,13 +60,13 @@ export default function ButtonSection() {
   }, []);
 
   return (
-     <div className="h-16 w-full flex items-start justify-start">
+     <div className="h-16 w-full flex items-start justify-start sm: h-2">
       <button
         ref={btnRef}
         className="relative overflow-hidden bg-[#854bfa] text-white font-medium px-12 py-5 rounded-full h-20 flex items-center justify-center"
       >
       
-        <span ref={textRef} className="inline-block relative text-lg">
+        <span ref={textRef} className="inline-block relative text-lg ">
           Get started
         </span>
         <span ref={altTextRef} className="inline-block relative text-lg">

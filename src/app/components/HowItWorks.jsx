@@ -105,8 +105,8 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <div className="w-full h-[60vh] flex flex-col items-center py-12 bg-[#f5f7fa]">
-      <h2 ref={headingRef} className="text-4xl font-bold mb-20 sm:mb-10 lg:text-[3rem]">
+    <div className="w-full flex flex-col items-center py-12 bg-[#f5f7fa]">
+      <h2 ref={headingRef} className="text-4xl font-bold mb-20 sm:mb-10 lg:text-[3rem] md:text-[2rem]">
         How are you
       </h2>
 
