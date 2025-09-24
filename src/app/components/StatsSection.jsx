@@ -4,7 +4,7 @@ import React from "react";
 export default function StatsSection() {
   const stats = [
     {
-      icon: "/shield.svg",
+      icon: "/Shield.svg",
       value: "33%",
       description: "are denied cyber insurance",
     },
