@@ -111,7 +111,7 @@ export default function HowItWorks() {
       </h2>
  
       {/* Container */}
-      <div className="flex flex-wrap flex-col sm:flex-row justify-center items-center gap-x-28 gap-y-35 md:grid md:grid-cols-2 md:gap-x-28 md:gap-y-24 lg:flex-row lg:gap-x-28 lg:gap-y-24  xl:flex xl:flex-row xl:gap-22">
+      <div className="flex flex-wrap flex-col sm:flex-row justify-center items-center gap-x-28 gap-y-35 md:grid md:grid-cols-2 md:gap-x-28 md:gap-y-24 lg:flex-row lg:gap-x-28 lg:gap-y-24  xl:flex xl:flex-row xl:gap-22 2xl:gap-x-28 2xl:gap-y-24">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -164,4 +164,3 @@ export default function HowItWorks() {
     </div>
   );
 }
- 
