@@ -167,7 +167,7 @@ export default function CardFees() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col hidden md:block justify-between h-150 relative sm:w-80 lg:w-100 xl:w-150 2xl:w-200">
+        <div className="flex flex-col hidden md:block justify-between h-150 relative sm:w-80 lg:w-100 xl:w-150 2xl:w-180">
  
           <div className="sm:ml-0 lg:ml-0 xl:ml-10 ">
             <h1
@@ -244,4 +244,3 @@ export default function CardFees() {
     </div>
   );
 }
- 
