@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import ButtonSection from './button';
+import Marquee from 'react-fast-marquee';
  
 gsap.registerPlugin(ScrollTrigger);
  
