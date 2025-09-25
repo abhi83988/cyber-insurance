@@ -67,7 +67,7 @@ export default function Header() {
 
   return (
    <header className="fixed top-0 left-0 w-full bg-white z-50">
-  <div className="h-16 flex items-center justify-between px-8 md:px-14">
+  <div className="h-16 flex items-center justify-between px-8 md:px-14 2xl:mx-20">
     {/* Logo */}
     <div className="flex items-center">
       <img src="/assets/logo2.svg" alt="Logo" className="h-10 w-auto" />
