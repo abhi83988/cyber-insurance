@@ -13,58 +13,58 @@ const StackingCardsSection = () => {
 
   const cards = [
     {
-      img: "/Union (1).svg",
+      img: "/assets/stack1.png",
       title: "LEXI Rating",
       text: "This is our personalized cyber insurability rating. A typical report assigns this rating to you, and typically includes:",
       bg: "bg-yellow-50",
     },
     {
-      img: "/Layerx(2).svg",
+      img: "/assets/stack2.png",
       title: "Industry Benchmarking",
       text: "Find out how your insurability compares to others in your sector.",
-      bg: "bg-yellow-50",
+      bg: "bg-blue-50",
     },
     {
-      img: "/Union (2).svg",
+      img: "/assets/stack3.png",
       title: "Confidence Levels",
       text: "See how confident we are in your results, based on data quality and assessment depth.",
       bg: "bg-pink-50",
     },
     {
-      img: "/Vector.svg",
+      img: "/assets/stack1.png",
       title: "Breach Likelihood",
       text: "Statistical probability of a material cyber attack based on your current posture.",
-      bg: "bg-yellow-50",
+      bg: "bg-purple-50",
     },
     {
-      img: "/Group.svg",
+      img: "/assets/stack2.png",
       title: "Financial Loss Estimate",
       text: "Projected costs if a breach occurs, including downtime and recovery.",
-      bg: "bg-pink-50",
+      bg: "bg-indigo-50",
     },
     {
-      img: "/Vector (1).svg",
+      img: "/assets/stack3.png",
       title: "Historical Trend Tracking",
       text: "As you participate over time, monitor how your insurability posture improves.",
-      bg: "bg-yellow-50",
+      bg: "bg-red-50",
     },
     {
-      img: "/Outline.svg",
+      img: "/assets/stack1.png",
       title: "Insurance Coverage Gap",
       text: "Specific vulnerabilities and missing protections in your current setup.",
-      bg: "bg-pink-50",
+      bg: "bg-yellow-50",
     },
     {
-      img: "/Vector (2).svg",
+      img: "/assets/stack2.png",
       title: "Real Time Results",
       text: "Instant results all in a fast, frictionless process.",
-      bg: "bg-yellow-50",
+      bg: "bg-blue-50",
     },
     {
-      img: "/Shield.svg",
+      img: "/assets/stack3.png",
       title: "Tailored Cyber Security Recommendations",
       text: "Actionable steps to improve your security posture and rating.",
-      bg: "bg-yellow-50",
+      bg: "bg-pink-50",
     },
   ];
 
@@ -117,21 +117,21 @@ const StackingCardsSection = () => {
             {index % 2 === 0 ? (
               <>
                 <div className="w-full lg:w-1/2">
-                  <Image src={card.img} alt={card.title} width={200} height={200} />
+                  <Image src={card.img} alt={card.title} width={800} height={900} />
                 </div>
                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
-                  <p className="text-lg">{card.text}</p>
+                  <h3 className="text-6xl font-bold mb-2">{card.title}</h3>
+                  <p className="text-2xl">{card.text}</p>
                 </div>
               </>
             ) : (
               <>
                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
-                  <p className="text-lg">{card.text}</p>
+                  <h3 className="text-6xl font-bold mb-2">{card.title}</h3>
+                  <p className="text-2xl">{card.text}</p>
                 </div>
                 <div className="w-full lg:w-1/2">
-                  <Image src={card.img} alt={card.title} width={200} height={200} />
+                  <Image src={card.img} alt={card.title} width={800} height={900} />
                 </div>
               </>
             )}
