@@ -106,8 +106,8 @@ export default function HowItWorks() {
  
   return (
     <div className="w-full flex flex-col items-center py-12 bg-[#f5f7fa]">
-      <h2 ref={headingRef} className="text-4xl font-bold mb-20 sm:mb-10 lg:text-[3rem] md:text-[2rem]">
-        How are you
+      <h2 ref={headingRef} className="text-5xl mb-20 sm:mb-10 lg:text-[4rem] md:text-[2rem]">
+        How It Works
       </h2>
  
       {/* Container */}
@@ -126,8 +126,8 @@ export default function HowItWorks() {
                 </div>
  
               </div>
-              <h3 className="font-semibold text-base mb-1 mt-6">{step.title}</h3>
-              <p className="text-sm text-[#1f1f1f] mb-6">{step.desc}</p>
+              <h3 className="font-semibold text-base mb-2 mt-6">{step.title}</h3>
+              <p className="text-sm text-[#1f1f1f] mb-6 leading-5">{step.desc}</p>
             </div>
  
             {/* Arrows */}

@@ -60,7 +60,7 @@ const Thirdpage = () => {
   ];
  
   return (
-    <div className="bg-gradient-to-tl from-[#d9d9ff] via-[#ffffff] to-[#d9d9ff] py-10 px-4 sm:px-8 md:px-12">
+    <div className="bg- py-10 px-4 sm:px-8 md:px-12">
       {/* Heading */}
       <div className="text-center">
         <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold pt-3 lg:text-[3rem]">
@@ -100,10 +100,10 @@ const Thirdpage = () => {
           </div>
  
           {/* Title */}
-          <h3 className="font-semibold text-base md:text-lg mt-3">{card.title}</h3>
+          <h3 className=" text-base md:text-lg mt-3">{card.title}</h3>
  
           {/* Text */}
-          <p className="text-sm md:text-base mt-2">{card.text}</p>
+          <p className=" text-sm md:text-base mt-2">{card.text}</p>
         </div>
       ))}
     </div>

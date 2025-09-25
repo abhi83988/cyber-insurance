@@ -3,9 +3,8 @@ import React from "react";
 
 export default function Footer2() {
   return (
-    <footer className="bg-gray-100 border-t border-gray-200 w-full">
-      {/* 👇 use same wrapper as header */}
-      <div className="w-full px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer className="bg-gray-100 w-full">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between h-16 px-4 md:px-8">
         {/* Left: Logo */}
         <div className="flex items-center">
           <img
@@ -16,7 +15,7 @@ export default function Footer2() {
         </div>
 
         {/* Right: Links */}
-        <div className="flex space-x-6 text-gray-600 text-lg font-medium">
+        <div className="flex space-x-6 text-gray-600 text-lg font-medium mt-4 md:mt-0">
           <a
             href="/terms"
             className="hover:text-gray-900 transition-colors"

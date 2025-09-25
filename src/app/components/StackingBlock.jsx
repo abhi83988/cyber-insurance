@@ -120,14 +120,14 @@ const StackingCardsSection = () => {
                   <Image src={card.img} alt={card.title} width={800} height={900} />
                 </div>
                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-6xl font-bold mb-2">{card.title}</h3>
+                  <h3 className="text-6xl  mb-2">{card.title}</h3>
                   <p className="text-2xl">{card.text}</p>
                 </div>
               </>
             ) : (
               <>
                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-6xl font-bold mb-2">{card.title}</h3>
+                  <h3 className="text-6xl  mb-2">{card.title}</h3>
                   <p className="text-2xl">{card.text}</p>
                 </div>
                 <div className="w-full lg:w-1/2">

@@ -28,7 +28,7 @@ export default function StatsSection() {
   const endOffset = 10;
 
   return (
-    <section className="relative py-12 overflow-hidden bg-white">
+    <section className="relative py-12 overflow-hidden ">
       <div className="absolute inset-0 pointer-events-none">
         <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1920 300">
           {Array.from({ length: lines }).map((_, i) => {

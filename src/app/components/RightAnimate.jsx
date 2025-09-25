@@ -6,10 +6,10 @@ const HeroRightImages = () => {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
  
+  // Initial fade-in animation
   useEffect(() => {
     if (imageRef.current) {
       gsap.set(imageRef.current, { opacity: 0, y: 50 });
- 
       gsap.to(imageRef.current, {
         opacity: 1,
         y: 0,
@@ -19,6 +19,7 @@ const HeroRightImages = () => {
     }
   }, []);
  
+  // Mouse move 3D tilt
   useEffect(() => {
     const container = containerRef.current;
     const image = imageRef.current;
@@ -33,10 +34,10 @@ const HeroRightImages = () => {
       const yPercent = (offsetY / rect.height - 0.5) * 2;
  
       gsap.to(image, {
-        rotateX: yPercent * 3, // reduced tilt
-        rotateY: xPercent * -3, // reduced tilt
-        duration: 1.6, // slower transition
-        ease: "power2.out", // smoother easing
+        rotateX: yPercent * 3,
+        rotateY: xPercent * -3,
+        duration: 1.6,
+        ease: "power2.out",
         transformPerspective: 1000,
         transformOrigin: "center",
       });
@@ -63,17 +64,20 @@ const HeroRightImages = () => {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-full flex justify-center items-center perspective-[1000px] max-[1390px]:min-[1280px]:-translate-x-[4rem]"
+     className="hero-image relative w-full flex justify-center items-center perspective-[1000px]"
+ 
+// prevent shrinking too small
     >
       <div
         ref={imageRef}
-        className="w-[90%] transform-gpu"
+        className="w-full max-w-[100%] lg:max-w-[2500px] transform-gpu" // responsive max width
         style={{ transformStyle: "preserve-3d" }}
       >
         <img
-          src="/hero-image.png"
+          src="/hero-image1.png"
           alt="Cyber Insurability"
-          className="w-full h-full object-contain rounded-lg shadow-lg"
+          className="w-full h-auto object-contain rounded-lg"
+         
         />
       </div>
     </div>
@@ -81,4 +85,3 @@ const HeroRightImages = () => {
 };
  
 export default HeroRightImages;
- 

@@ -4,20 +4,19 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'Theinhardt';
-  src: url('/fonts/Theinhardt-Medium.ef35c2f5.woff2') format('woff2'),
-       url('/fonts/Theinhardt-Regular.18c88f92.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'PPMori';
+  src: url('/fonts/63ef7ea26fd458cf9230e5aa_PPMori-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Cambon';
-  src: url('/fonts/Cambon-Bold.a83f694d.woff2') format('woff2'),
-       url('/fonts/Cambon-Bold.a83f694d.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'PPMori';
+  src: url('/fonts/63ef7ea269d5501c4ab5ee08_PPMori-SemiBold.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
 }
+
 @keyframes marquee {
   0%   { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
@@ -46,13 +45,13 @@
 
 /* Apply globally */
 body {
-  font-family: Cambon, Arial, Helvetica, sans-serif !important;
-background-color:#f5f7fa;
+   font-family: 'PPMori', sans-serif;
+background-color:#f5f7fa ;
 }
 
 /* Optional: fallback if Cambon not loaded */
 p, span, h1, h2, h3, h4, h5, h6, a, button, input {
-  font-family: Theinhardt, Arial, Helvetica, sans-serif;
+  font-family: 'PPMori', sans-serif;
 }
 /* ---break---  */
 @theme inline {

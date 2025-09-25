@@ -1,0 +1,110 @@
+// components/CtaSection.jsx
+"use client";
+import React, { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import ButtonSection from "./button";
+
+export default function CtaSection() {
+  const containerRef = useRef(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2; // -1 to 1
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2; // -1 to 1
+      setMousePos({ x, y });
+    };
+
+    const container = containerRef.current;
+    container.addEventListener("mousemove", handleMouseMove);
+
+    return () => container.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  return (
+    <section
+      ref={containerRef}
+      className="relative bg-[#1F2933] py-24 overflow-hidden"
+    >
+      {/* Container */}
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center max-w-3xl mx-auto">
+          {/* Heading */}
+          <h1 className="relative text-[2rem] sm:text-[2.8rem] md:text-[2.7rem] lg:text-[3.7rem] xl:text-[4.6rem]
+            font-normal leading-[1] tracking-[-0.03em] text-white whitespace-nowrap box-border">
+            <span className="relative inline-block">
+              Start Building today
+              <svg className="absolute left-0 bottom-0 w-full h-6" viewBox="0 0 448 26" fill="none">
+                <motion.path
+                  d="M73.3804 22.8573C166.579 20.3422 259.873 18.2243 352.949 14.802"
+                  stroke="#8247FF"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeDasharray="301"
+                  strokeDashoffset="301"
+                  initial={{ strokeDashoffset: 301 }}
+                  animate={{ strokeDashoffset: 0 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                />
+                <motion.path
+                  d="M1.99989 20.173C62.4908 14.9745 123.484 13.4458 184.125 11.1428"
+                  stroke="#8247FF"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeDasharray="446"
+                  strokeDashoffset="446"
+                  initial={{ strokeDashoffset: 446 }}
+                  animate={{ strokeDashoffset: 0 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.1 }}
+                />
+              </svg>
+            </span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="mt-6 text-lg md:text-xl text-gray-400">
+            Get in touch to learn how our open banking solution can increase
+            efficiency and speed for your business.
+          </p>
+
+          {/* Button */}
+          <ButtonSection/>
+        </div>
+      </div>
+
+      {/* Circles with mouse movement */}
+      {/* 1st circle */}
+      <img
+        src="https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e282a253c54c13a6ec8fb3_circle-01.svg"
+        alt="circle1"
+        className="absolute top-1/2 left-1/2 w-[60%] max-w-[300px] opacity-50 pointer-events-none"
+        style={{
+          transform: `translate(-50%, -50%) translateX(${mousePos.x * 10}px) translateY(${mousePos.y * 10}px)`,
+          transition: "transform 0.1s ease-out",
+        }}
+      />
+      {/* 2nd circle */}
+      <img
+        src="https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e282a26102e58730e4f3aa_circle-02.svg"
+        alt="circle2"
+        className="absolute top-1/2 left-1/2 w-[120%] max-w-[600px] opacity-40 pointer-events-none"
+        style={{
+          transform: `translate(-50%, -50%) translateX(${mousePos.x * 20}px) translateY(${mousePos.y * 20}px)`,
+          transition: "transform 0.1s ease-out",
+        }}
+      />
+      {/* 3rd circle - adjusted size */}
+      <img
+        src="https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e282a36102e57408e4f3c4_circle-03.svg"
+        alt="circle3"
+        className="absolute top-1/2 left-1/2 w-[150%] max-w-[900px] opacity-30 pointer-events-none"
+        style={{
+          transform: `translate(-50%, -50%) translateX(${mousePos.x * 15}px) translateY(${mousePos.y * 15}px)`,
+          transition: "transform 0.1s ease-out",
+        }}
+      />
+    </section>
+  );
+}

@@ -1,35 +1,55 @@
 'use client';
  
-import { useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import ButtonSection from './button';
-import Marquee from 'react-fast-marquee';
  
 gsap.registerPlugin(ScrollTrigger);
  
 export default function CardFees() {
+    const cardWrapperRef = useRef(null);
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // const cards = gsap.utils.toArray('.card');
+      const wrapper = cardWrapperRef.current;
  
-      // gsap.fromTo(
-      //   cards,
-      //   { x: -200, opacity: 0 },
-      //   {
-      //     x: 0,
-      //     opacity: 1,
-      //     duration: 3,
-      //     stagger: { each: 1, from: 'start' },
-      //     scrollTrigger: {
-      //       trigger: '.abhusection',
-      //       start: 'top 70%',
-      //       // end: 'bottom top',1
-      //       scrub: true,
-      //     },
-      //   }
-      // );
+      const cards = gsap.utils.toArray('.card');
+      const cardHeight = 240; // approx height of one card
+      const totalHeight = cards.length * cardHeight;
+ 
+      // Scroll up the whole card list smoothly
+      gsap.to(wrapper, {
+        y: `-${totalHeight - 600}px`, // 600 is visible container height
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.abhusection',
+          start: 'top center',
+          end: `+=${totalHeight}`,
+          scrub: true,
+        },
+      });
+ 
+      // Animate individual cards scaling in & fading
+      cards.forEach((card) => {
+        gsap.fromTo(
+          card,
+          { scale: 0.95, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 1.5,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 85%',
+              toggleActions: 'play reverse play reverse',
+            },
+          }
+        );
+      });
+ 
+
  
       gsap.utils.toArray('.image').forEach((img) => {
         gsap.from(img, {
@@ -83,7 +103,7 @@ export default function CardFees() {
  
   return (
  
-    <div className="min-h-195 sm:min-h-190 bg-[#0C1B28] h-100 text-white flex items-evenly justify-center rounded-4xl px-8 py-16 abhusection">
+    <div className="min-h-195 sm:min-h-200 bg-[#0C1B28] h-100 text-white flex items-evenly justify-center rounded-4xl px-8 py-16 abhusection overflow-hidden lg:mx-7 2xl:mx-20">
       <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-12">
         {/* Mobile Version */}
         <div className="flex flex-col block md:hidden justify-between h-full relative">
@@ -155,24 +175,22 @@ export default function CardFees() {
             />
           </div>
         </div>
-        <div className="flex-1 sm:h-[600px] h-[400px] overflow-hidden relative align-self-end">
-          <div className="flex items-center animate-marquee space-x-6 absolute top-20 left-0 md:top-40">
-            {cardData.concat(cardData).map((card, index) => (
-              <div
-                key={index}
-                className="card bg-[#B8E3E3] text-[#1D2C3C] p-6 rounded-2xl shadow-xl w-100 h-50 md:w-100 md:h-70 flex-shrink-0"
-              >
-                <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
-                <p className="text-base">{card.description}</p>
-              </div>
-            ))}
-          </div>
+          <div ref={cardWrapperRef} className="flex flex-col gap-6 mt-100 md:mt-0">
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="card bg-[#B8E3E3] text-[#1D2C3C] p-6 rounded-2xl w-80 md:w-100 shadow-xl"
+            >
+              <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
+              <p className="text-base">{card.description}</p>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col hidden md:block justify-between h-150 relative sm:w-80 lg:w-100 xl:w-150 2xl:w-180">
+        <div className="flex flex-col hidden md:block justify-between h-150 relative sm:w-80 lg:w-100 lg:h-170 xl:w-150 2xl:w-180">
  
           <div className="sm:ml-0 lg:ml-0 xl:ml-10 ">
             <h1
-              className="relative text-[2rem] sm:text-[2.8rem] md:text-[2.7rem] lg:text-[3.7rem] xl:text-[4.6rem]
+              className="relative text-[2rem] sm:text-[2.8rem] md:text-[2.7rem] lg:text-[2.5rem] xl:text-[3rem] 2xl:text-[4.6rem]
                max-[1254px]:text-[2.2rem] max-[1096px]:text-[2rem] max-[768px]:text-[1.8rem]
                font-normal leading-[1] tracking-[-0.03em] sm:tracking-[-0.04em] md:tracking-[-0.05em]
                text-white whitespace-nowrap box-border"
@@ -216,9 +234,8 @@ export default function CardFees() {
               </span>
             </h1>
  
-            <p className="text-2xl text-white mb-8 mt-10">
+            <p className="lg:text-sm xl:text-base xl:mr-10 2xl:text-2xl text-white mb-8 mt-10">
               Join payments evolution with us. Accept bank payments
-              <br />
               that are settled in seconds.
             </p>
           </div>

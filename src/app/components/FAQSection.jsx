@@ -55,8 +55,8 @@ export default function FAQSection() {
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 8);
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold text-center mb-8 lg:text-[3rem]">
+    <div className="max-w-4xl mx-auto px-4 py-10">
+      <h2 className="text-3xl text-center mb-8 lg:text-[4rem]">
         Frequently Asked Questions
       </h2>
 

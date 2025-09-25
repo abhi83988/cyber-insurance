@@ -1,20 +1,20 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
- 
+
 export default function Header() {
   const loginBtnRef = useRef(null);
   const loginTextRef = useRef(null);
   const loginAltTextRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
- 
+
   // Login button hover animation
   useEffect(() => {
     const btn = loginBtnRef.current;
     const text = loginTextRef.current;
     const altText = loginAltTextRef.current;
- 
+
     gsap.set(altText, {
       y: -20,
       opacity: 0,
@@ -23,25 +23,25 @@ export default function Header() {
       right: 0,
       textAlign: "center",
     });
- 
+
     const hoverTimeline = gsap.timeline({ paused: true });
     hoverTimeline
       .to(btn, { scale: 0.95, duration: 0.3, ease: "power2.out" }, 0)
       .to(text, { y: 20, opacity: 0, duration: 0.3, ease: "power2.out" }, 0)
       .to(altText, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out" }, 0);
- 
+
     const hoverIn = () => hoverTimeline.play();
     const hoverOut = () => hoverTimeline.reverse();
- 
+
     btn.addEventListener("mouseenter", hoverIn);
     btn.addEventListener("mouseleave", hoverOut);
- 
+
     return () => {
       btn.removeEventListener("mouseenter", hoverIn);
       btn.removeEventListener("mouseleave", hoverOut);
     };
   }, []);
- 
+
   // Mobile drawer animation
   useEffect(() => {
     if (mobileMenuRef.current) {
@@ -64,86 +64,86 @@ export default function Header() {
       }
     }
   }, [menuOpen]);
- 
+
   return (
-<header className="fixed top-0 left-0 w-full bg-white shadow z-50">
-<div className="h-16 relative w-full flex items-center justify-between px-4 md:px-6">
+    <header className="fixed top-0 left-0 w-full bg-white z-50">
+      <div className="max-w-7xl mx-auto h-16 flex items-center justify-between px-4 md:px-8">
         {/* Logo */}
-<div className="flex items-center">
-<img src="/assets/logo2.svg" alt="Logo" className="h-10 w-auto" />
-</div>
- 
-        {/* Desktop nav */}
-<div className="hidden md:flex items-center space-x-8">
-<a
+        <div className="flex items-center">
+          <img src="/assets/logo2.svg" alt="Logo" className="h-10 w-auto" />
+        </div>
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center space-x-10">
+          <a
             href="#products"
-            className="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
->
+            className="relative text-gray-700 font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
             Products
-</a>
-<a
+          </a>
+          <a
             href="#developers"
-            className="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
->
+            className="relative text-gray-700 font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
             Developers
-</a>
-<button
+          </a>
+          <button
             ref={loginBtnRef}
-            className="relative overflow-hidden bg-black text-white font-medium px-6 py-3 rounded-full h-12 flex items-center justify-center"
->
-<span ref={loginTextRef} className="inline-block relative">
+            className="relative overflow-hidden bg-black text-white font-medium px-6 py-2 rounded-full h-12 flex items-center justify-center"
+          >
+            <span ref={loginTextRef} className="inline-block relative">
               Login
-</span>
-<span ref={loginAltTextRef} className="inline-block relative">
+            </span>
+            <span ref={loginAltTextRef} className="inline-block relative">
               Sign In
-</span>
-</button>
-</div>
- 
+            </span>
+          </button>
+        </div>
+
         {/* Hamburger */}
-<button
+        <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden relative w-8 h-8 flex flex-col justify-center items-center space-y-1.5 focus:outline-none"
->
-<span
+          className="md:hidden flex flex-col justify-center items-center space-y-1.5 w-8 h-8 focus:outline-none"
+        >
+          <span
             className={`block h-[2px] w-6 bg-black transition-transform duration-300 ${
               menuOpen ? "rotate-45 translate-y-1" : ""
             }`}
-></span>
-<span
+          ></span>
+          <span
             className={`block h-[2px] w-6 bg-black transition-transform duration-300 ${
               menuOpen ? "-rotate-45 -translate-y-1" : ""
             }`}
-></span>
-</button>
-</div>
- 
-      {/* Mobile drawer */}
-<div
+          ></span>
+        </button>
+      </div>
+
+      {/* Mobile Drawer */}
+      <div
         ref={mobileMenuRef}
-        className="md:hidden fixed top-16 left-0 w-full bg-white shadow-lg flex flex-col items-start space-y-6 py-6 px-6 opacity-0 -translate-y-full pointer-events-none"
->
-<a
+        className="md:hidden fixed top-16 left-0 w-full bg-white flex flex-col items-start space-y-4 py-6 px-6 opacity-0 -translate-y-full pointer-events-none"
+      >
+        <a
           href="#products"
           onClick={() => setMenuOpen(false)}
-          className="text-gray-700 font-medium text-lg w-full"
->
+          className="text-gray-700 font-medium text-lg w-full hover:text-violet-600 transition-colors duration-300"
+        >
           Products
-</a>
-<a
+        </a>
+        <a
           href="#developers"
           onClick={() => setMenuOpen(false)}
-          className="text-gray-700 font-medium text-lg w-full"
->
+          className="text-gray-700 font-medium text-lg w-full hover:text-violet-600 transition-colors duration-300"
+        >
           Developers
-</a>
-<button
+        </a>
+        <button
           onClick={() => setMenuOpen(false)}
-          className="bg-black text-white font-medium px-6 py-3 rounded-full w-full flex items-center justify-center"
->
+          className="bg-black text-white font-medium px-6 py-2 rounded-full w-full flex items-center justify-center"
+        >
           Login
-</button>
-</div>
-</header>
+        </button>
+      </div>
+    </header>
   );
 }

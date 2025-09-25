@@ -27,10 +27,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16  bg-[#f5f7fa]">
+    <section className="py-16">
       <div className="max-w-6xl mx-auto text-center px-4">
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 lg:text-[3rem]">
+        <h2 className="text-3xl md:text-4xl text-gray-800 mb-6 lg:text-[4rem]">
           Trusted by Small Businesses
         </h2>
 
