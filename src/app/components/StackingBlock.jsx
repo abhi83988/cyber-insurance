@@ -111,7 +111,7 @@ const StackingCardsSection = () => {
           }}
         >
           <div
-            className={`${card.bg} rounded-3xl h-full flex flex-col lg:flex-row items-center justify-center gap-6 text-black text-center lg:text-left px-8 py-6 shadow-2xl will-change-transform`}
+            className={`${card.bg} rounded-3xl h-full flex flex-col lg:flex-row items-center justify-center gap-6 text-black text-center lg:text-left px-8 py-6 will-change-transform`}
           >
             {/* Alternate image position */}
             {index % 2 === 0 ? (

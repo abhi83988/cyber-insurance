@@ -4,7 +4,7 @@ import React from "react";
 export default function Footer2() {
   return (
    <footer className="bg-gray-100 w-full">
-  <div className="flex flex-col md:flex-row items-center justify-between h-16 px-4 md:px-8">
+  <div className="flex flex-col md:flex-row items-center justify-between h-16 px-6 md:px-12">
     {/* Left: Logo */}
     <div className="flex items-center">
       <img src="/assets/logo2.svg" alt="Company Logo" className="h-10 w-auto" />
