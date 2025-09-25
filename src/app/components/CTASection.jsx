@@ -85,9 +85,9 @@ export default function CtaSection() {
             <img
                 src="https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e282a253c54c13a6ec8fb3_circle-01.svg"
                 alt="circle1"
-                className="absolute top-1/2 left-1/2 w-[60%] max-w-[300px] opacity-50 pointer-events-none"
+                className="absolute top-1/2 left-1/2 w-[60%] max-w-[350px] opacity-100 pointer-events-none"
                 style={{
-                    transform: `translate(-50%, -50%) translateX(${mousePos.x * 10}px) translateY(${mousePos.y * 10}px)`,
+                    transform: `translate(-50%, -50%) translateX(${mousePos.x * 55}px) translateY(${mousePos.y * 50}px)`,
                     transition: "transform 0.1s ease-out",
                 }}
             />
@@ -95,9 +95,9 @@ export default function CtaSection() {
             <img
                 src="https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e282a26102e58730e4f3aa_circle-02.svg"
                 alt="circle2"
-                className="absolute top-1/2 left-1/2 w-[120%] max-w-[600px] opacity-40 pointer-events-none"
+                className="absolute top-1/2 left-1/2 w-[120%] max-w-[700px] opacity-90 pointer-events-none"
                 style={{
-                    transform: `translate(-50%, -50%) translateX(${mousePos.x * 20}px) translateY(${mousePos.y * 20}px)`,
+                    transform: `translate(-50%, -50%) translateX(${mousePos.x * 55}px) translateY(${mousePos.y * 50}px)`,
                     transition: "transform 0.1s ease-out",
                 }}
             />
@@ -105,9 +105,9 @@ export default function CtaSection() {
             <img
                 src="https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e282a36102e57408e4f3c4_circle-03.svg"
                 alt="circle3"
-                className="absolute top-1/2 left-1/2 w-[150%] max-w-[900px] opacity-30 pointer-events-none"
+                className="absolute top-1/2 left-1/2 w-[150%] max-w-[1050px] opacity-90 pointer-events-none"
                 style={{
-                    transform: `translate(-50%, -50%) translateX(${mousePos.x * 15}px) translateY(${mousePos.y * 15}px)`,
+                    transform: `translate(-50%, -50%) translateX(${mousePos.x * 55}px) translateY(${mousePos.y * 50}px)`,
                     transition: "transform 0.1s ease-out",
                 }}
             />
