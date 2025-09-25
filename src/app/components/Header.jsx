@@ -66,12 +66,12 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white z-50">
-      <div className="max-w-7xl mx-auto h-16 flex items-center justify-between px-4 md:px-8">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img src="/assets/logo2.svg" alt="Logo" className="h-10 w-auto" />
-        </div>
+   <header className="fixed top-0 left-0 w-full bg-white z-50">
+  <div className="h-16 flex items-center justify-between px-4 md:px-8">
+    {/* Logo */}
+    <div className="flex items-center">
+      <img src="/assets/logo2.svg" alt="Logo" className="h-10 w-auto" />
+    </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-10">
