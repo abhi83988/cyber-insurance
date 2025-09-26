@@ -115,9 +115,9 @@ export default function CardFees() {
                font-normal leading-[1] tracking-[-0.03em] sm:tracking-[-0.04em] md:tracking-[-0.05em]
                text-white whitespace-nowrap box-border"
             >
-              Tired of paying high <br />
+              What Does LEXI Rating <br />
               <span className="relative inline-block">
-                Card fees?
+                Mean?
                 <svg
                   className="absolute left-0 bottom--1 w-full h-6"
                   viewBox="0 0 448 26"
@@ -155,8 +155,7 @@ export default function CardFees() {
             </h1>
  
             <p className="text-lg text-white mb-8 mt-10">
-              Join payments evolution with us. Accept bank payments that are
-              settled in seconds.
+            Lexi Rating™ evaluates cyber risk posture and translates it into a score that insurers understand. It benchmarks SMEs against industry norms, using data on security practices, controls, incident history, and resilience. You can use your Rating & Insurability report to negotiate better premiums, and minimize the risk of denial of coverage.
             </p>
             <button className="bg-[#854bfa] hover:bg-purple-700 text-white py-3 px-6 rounded-full text-lg transition">
               Get in touch →
@@ -195,9 +194,9 @@ export default function CardFees() {
                font-normal leading-[1] tracking-[-0.03em] sm:tracking-[-0.04em] md:tracking-[-0.05em]
                text-white whitespace-nowrap box-border"
             >
-              Tired of paying high <br />
+              What Does LEXI Rating <br />
               <span className="relative inline-block">
-                Card fees?
+              Mean? 
                 <svg
                   className="absolute left-0 bottom--1 w-full h-6"
                   viewBox="0 0 448 26"
@@ -235,8 +234,7 @@ export default function CardFees() {
             </h1>
  
             <p className="lg:text-sm xl:text-base xl:mr-10 2xl:text-2xl text-white mb-8 mt-10">
-              Join payments evolution with us. Accept bank payments
-              that are settled in seconds.
+            Lexi Rating™ evaluates cyber risk posture and translates it into a score that insurers understand. It benchmarks SMEs against industry norms, using data on security practices, controls, incident history, and resilience. You can use your Rating & Insurability report to negotiate better premiums, and minimize the risk of denial of coverage.
             </p>
           </div>
           <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-between items-end  sm:flex-col sm:gap-30 lg:flex-col lg:gap-10 xl:flex-col xl:justify-between xl:items-start 2xl:flex-row 2xl:justify-between 2xl:items-end  p-4">

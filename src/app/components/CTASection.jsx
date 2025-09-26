@@ -34,7 +34,7 @@ export default function CtaSection() {
                     <h1 className="relative text-[2.5rem] sm:text-[2.8rem] md:text-[2.7rem] lg:text-[3rem] xl:text-[4rem] 2xl:text-[4.6rem]
          leading-[1] tracking-[-0.03em] text-white box-border">
                         <span className="relative inline-block mr-2">
-                            Start building
+                            Get your LEXI Rating
                             <svg className="absolute left-0 bottom-0 w-full h-6" viewBox="0 0 448 26" fill="none">
                                 <motion.path
                                     d="M73.3804 22.8573C166.579 20.3422 259.873 18.2243 352.949 14.802"
@@ -68,13 +68,12 @@ export default function CtaSection() {
  
                     {/* Subheading */}
                     <p className="mt-6 text-base mx-12 md:mx-25 md:text-2xl lg:text-base xl:text-xl text-gray-400">
-                        Get in touch to learn how our open banking solution can increase
-                        efficiency and speed for your business.
+                    Join over 1,000 small businesses who have improved their cyber insurability with Lexi Ratings
                     </p>
  
                     {/* Button */}
                     <div className="mt-5 lg:mt-5 2xl:mt-7">
-                        <ButtonSection />
+                        <ButtonSection text="Get your LEXI Rating" />
  
                     </div>
                 </div>

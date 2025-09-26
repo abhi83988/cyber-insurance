@@ -127,7 +127,7 @@ export default function HowItWorks() {
  
               </div>
               <h3 className="font-semibold text-base mb-2 mt-6">{step.title}</h3>
-              <p className="text-sm text-[#1f1f1f] mb-6 leading-5">{step.desc}</p>
+              <p className="text-xs text-[#1f1f1f] mb-6 leading-5">{step.desc}</p>
             </div>
  
             {/* Arrows */}

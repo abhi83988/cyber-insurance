@@ -1,6 +1,6 @@
 // components/FAQSection.jsx
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const faqs = [
   {
@@ -51,8 +51,17 @@ const faqs = [
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(-1);
   const [showAll, setShowAll] = useState(false);
+  const contentRefs = useRef([]);
 
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 8);
+
+  useEffect(() => {
+    contentRefs.current = contentRefs.current.slice(0, visibleFaqs.length);
+  }, [visibleFaqs.length]);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? -1 : index);
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
@@ -66,20 +75,20 @@ export default function FAQSection() {
           return (
             <div
               key={index}
-              className={`border border-green-500 rounded overflow-hidden transition-colors duration-300 ${
+              className={`border border-green-500 rounded overflow-hidden transition-all duration-500 ease-in-out ${
                 isOpen
-                  ? "bg-gradient-to-r from-[#001a44] to-[#00b383] text-white"
-                  : "bg-white text-black hover:bg-gradient-to-r hover:from-[#001a44] hover:to-[#00b383] hover:text-white"
+                  ? "bg-gradient-to-r from-[#001a44] to-[#00b383] text-white shadow-lg"
+                  : "bg-white text-black hover:bg-gradient-to-r hover:from-[#001a44] hover:to-[#00b383] hover:text-white hover:shadow-md"
               }`}
             >
               <button
-                onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                className="w-full flex items-center px-4 py-3 text-left font-medium"
+                onClick={() => toggleFAQ(index)}
+                className="w-full flex items-center px-4 py-3 text-left font-medium transition-all duration-300"
               >
                 {/* Triangle arrow at start */}
                 <span
-                  className={`mr-3 transform transition-transform duration-300 ${
-                    isOpen ? "rotate-90" : ""
+                  className={`mr-3 transform transition-all duration-500 ease-in-out ${
+                    isOpen ? "rotate-90 scale-110" : "rotate-0 scale-100"
                   }`}
                 >
                   <svg
@@ -89,24 +98,37 @@ export default function FAQSection() {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </span>
-                <span>{item.question}</span>
+                <span className="transition-all duration-300">{item.question}</span>
               </button>
 
-              {isOpen && (
-                <div className="px-11 pb-4 text-sm bg-white text-black">
+              {/* Answer content with smooth height transition */}
+              <div
+                ref={(el) => (contentRefs.current[index] = el)}
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                  isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+                style={{
+                  maxHeight: isOpen 
+                    ? contentRefs.current[index]?.scrollHeight + 'px' 
+                    : '0px'
+                }}
+              >
+                <div className={`px-11 py-4 text-sm bg-white text-black transform transition-all duration-500 ${
+                  isOpen ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+                }`}>
                   {item.answer}
                 </div>
-              )}
+              </div>
             </div>
           );
         })}
       </div>
 
       {!showAll && faqs.length > 5 && (
-        <div className="mt-6 flex justify-start">
+        <div className="mt-6 text-center">
           <button
             onClick={() => setShowAll(true)}
-            className="bg-[#001a44] text-white px-10 py-2  hover:bg-[#003366]"
+            className="bg-[#001a44] text-white px-10 py-2 rounded transition-all duration-300 hover:bg-[#003366] hover:scale-105"
           >
             More ▼
           </button>

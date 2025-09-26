@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
 
-export default function ButtonSection() {
+export default function ButtonSection({text="Get in touch"}) {
   const btnRef = useRef(null);
   const textRef = useRef(null);
   const altTextRef = useRef(null);
@@ -67,10 +67,10 @@ export default function ButtonSection() {
       >
       
         <span ref={textRef} className="inline-block relative text-lg">
-          Get in touch
+          {text}
         </span>
         <span ref={altTextRef} className="inline-block relative text-lg">
-          Get in touch
+          {text}
         </span>
 
      

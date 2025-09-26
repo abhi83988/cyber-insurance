@@ -3,15 +3,15 @@ import React from "react";
 
 export default function Footer2() {
   return (
-   <footer className="bg-gray-100 w-full">
-  <div className="flex flex-col md:flex-row items-center justify-between h-16 px-8 md:px-14 2xl:mx-20">
+   <footer className="bg-gray-100 mt-20 w-full">
+  <div className="flex md:flex-row items-center justify-between h-16 px-8 md:px-14 2xl:mx-20">
     {/* Left: Logo */}
     <div className="flex items-center">
       <img src="/assets/logo2.svg" alt="Company Logo" className="h-10 w-auto" />
     </div>
 
         {/* Right: Links */}
-        <div className="flex space-x-6 text-gray-600 text-lg font-medium mt-4 md:mt-0">
+        <div className="flex space-x-6 text-gray-600 text-xs sm:text-lg font-medium mt-4 md:mt-0">
           <a
             href="/terms"
             className="hover:text-gray-900 transition-colors"
