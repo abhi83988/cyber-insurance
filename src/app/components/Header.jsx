@@ -66,7 +66,7 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-   <header className="fixed top-0 left-0 w-full bg-[#f5f7fa] z-50">
+   <header className="fixed top-0 left-0 w-full bg-[#f5f7fa] z-100">
   <div className="h-16 flex items-center justify-between px-8 md:px-14 2xl:mx-20">
     {/* Logo */}
     <div className="flex items-center">
