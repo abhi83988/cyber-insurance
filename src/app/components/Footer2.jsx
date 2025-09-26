@@ -3,11 +3,11 @@ import React from "react";
 
 export default function Footer2() {
   return (
-   <footer className="bg-gray-100 mt-20 w-full">
-  <div className="flex md:flex-row items-center justify-between h-16 px-8 md:px-14 2xl:mx-20">
+   <footer className="mt-20 w-full">
+  <div className="flex md:flex-row items-center justify-between h-20 px-8 md:px-14 2xl:mx-20">
     {/* Left: Logo */}
     <div className="flex items-center">
-      <img src="/assets/logo2.svg" alt="Company Logo" className="h-10 w-auto" />
+      <img src="/assets/logo2.svg" alt="Company Logo" className="h-14 w-auto" />
     </div>
 
         {/* Right: Links */}
