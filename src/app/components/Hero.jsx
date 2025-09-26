@@ -39,7 +39,7 @@ const Hero = () => {
     <div className="block 2xl:px-[7em] px-[1em]">
  
       {/* Hero Section */}
-      <section className="w-full py-[12rem]  flex items-center justify-center overflow-x-hidden">
+      <section className="w-full py-[7rem] md:py-[12rem] flex items-center justify-center overflow-x-hidden">
         <div className="max-w-12xl w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-8">
  
           {/* LEFT TEXT */}
