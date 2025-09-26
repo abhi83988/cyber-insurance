@@ -34,14 +34,14 @@ export default function CardFees() {
       cards.forEach((card) => {
         gsap.fromTo(
           card,
-          { scale: 0.95, opacity: 0 },
+          { scale: 0.5, opacity: 0 },
           {
             scale: 1,
             opacity: 1,
             duration: 1.5,
             ease: 'power2.out',
             scrollTrigger: {
-              trigger: card,
+              trigger: '.abhusection',
               start: 'top 85%',
               toggleActions: 'play reverse play reverse',
             },
@@ -102,7 +102,7 @@ export default function CardFees() {
  
   return (
  
-    <div className="min-h-195 sm:min-h-200 bg-[#0C1B28] h-100 text-white flex items-evenly justify-center rounded-4xl px-8 py-16 abhusection overflow-hidden mx-2 md:mx-6 lg:mx-7 2xl:mx-20">
+    <div className="min-h-350 sm:min-h-295 md:min-h-200 bg-[#0C1B28] h-100 text-white flex items-evenly justify-center rounded-4xl px-8 py-16 abhusection overflow-hidden mx-2 md:mx-6 lg:mx-7 2xl:mx-20">
       <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-12">
         {/* Mobile Version */}
         <div className="flex flex-col block md:hidden justify-between h-full relative">
@@ -156,24 +156,24 @@ export default function CardFees() {
             <p className="text-[1rem] text-white mb-8 mt-7">
             Lexi Rating™ evaluates cyber risk posture and translates it into a score that insurers understand. It benchmarks SMEs against industry norms, using data on security practices, controls, incident history, and resilience. You can use your Rating & Insurability report to negotiate better premiums, and minimize the risk of denial of coverage.
             </p>
-            <button className="bg-[#854bfa] hover:bg-purple-700 text-white py-3 px-6 rounded-full text-lg transition">
+            <button className="bg-[#854bfa] hover:bg-purple-700 text-white py-3 px-6 rounded-full text-lg transition ">
               Get in touch →
             </button>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-center space-x-0 z-10 ml-50 -translate-x-10">
+          <div className="absolute bottom-0 left-0 right-0 top-80 flex flex-row justify-center space-x-0 z-10 ml-50 -translate-x-10">
             <img
               src="/cardfees.png"
               alt="Credit Card 1"
-              className="image w-50 h-40 sm:w-35 sm:h-50 z-20 transform translate-y-8 -mr-16"
+              className="image w-50 h-40 sm:w-35 sm:h-50 z-20 transform translate-y-0 -mr-16"
             />
             <img
               src="/cardfees.png"
               alt="Credit Card 2"
-              className="image w-50 h-40 sm:w-35 sm:h-50 z-10 transform -translate-y-15"
+              className="image w-50 h-40 sm:w-35 sm:h-50 z-10 transform -translate-y-10"
             />
           </div>
         </div>
-          <div ref={cardWrapperRef} className="flex flex-col gap-6 mt-110 md:mt-0 justify-center items-center">
+          <div ref={cardWrapperRef} className="flex flex-col gap-6 mt-115 md:mt-0 justify-center items-center z-50">
           {cardData.map((card, index) => (
             <div
               key={index}
@@ -184,7 +184,7 @@ export default function CardFees() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col hidden md:block justify-between h-150 relative sm:w-80 lg:w-100 lg:h-170 xl:w-150 2xl:w-175">
+        <div className="flex flex-col hidden md:block justify-between h-150 md:h-180 relative sm:w-80 lg:w-100 lg:h-180 xl:w-150 2xl:w-168">
  
           <div className="sm:ml-0 lg:ml-0 xl:ml-10 ">
             <h1
@@ -236,18 +236,18 @@ export default function CardFees() {
             Lexi Rating™ evaluates cyber risk posture and translates it into a score that insurers understand. It benchmarks SMEs against industry norms, using data on security practices, controls, incident history, and resilience. You can use your Rating & Insurability report to negotiate better premiums, and minimize the risk of denial of coverage.
             </p>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-between items-end  sm:flex-col sm:gap-30 lg:flex-col lg:gap-10 xl:flex-col xl:justify-between xl:items-start 2xl:flex-row 2xl:justify-between 2xl:items-end  p-4">
+          <div className="absolute bottom-0 left-0 right-0 flex flex-row justify-between items-end  sm:flex-col sm:gap-30 lg:flex-col lg:gap-10 xl:flex-col xl:justify-between xl:items-start 2xl:flex-row 2xl:justify-between 2xl:items-end md:flex p-4">
  
-            <div className="flex flex-row relative sm:ml-0 lg:ml-0 xl:ml-10">
+            <div className="flex flex-row relative sm:ml-0 md:mr-20 lg:ml-0 xl:ml-10">
               <img
                 src="/cardfees.png"
                 alt="Credit Card 1"
-                className="image sm:w-55 sm:h-60 lg:w-55 lg:h-70 xl:w-55 xl:h-80 z-20 transform translate-y-8 -mr-16"
+                className="image sm:w-55 sm:h-60 md:sm:w-35 md:h-50 lg:w-55 lg:h-70 xl:w-55 xl:h-80 z-20 transform translate-y-8 -mr-16"
               />
               <img
                 src="/cardfees.png"
                 alt="Credit Card 2"
-                className="image sm:w-55 sm:h-60  lg:w-55 lg:h-70 xl:w-55 xl:h-80 z-10 transform -translate-y-15"
+                className="image sm:w-55 sm:h-60 md:sm:w-35 md:h-50 lg:w-55 lg:h-70 xl:w-55 xl:h-80 z-10 transform -translate-y-15"
               />
             </div>
             <div className='xl:ml-90 2xl:ml-0'>
