@@ -31,11 +31,11 @@ export default function CtaSection() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto">
                     {/* Heading */}
-                    <h1 className="relative text-[2.5rem] sm:text-[2.8rem] md:text-[2.7rem] lg:text-[3rem] xl:text-[4rem] 2xl:text-[4.6rem]
+                    <h1 className="relative text-[2.1rem] sm:text-[2.5rem] md:text-[2.7rem] lg:text-[2.8rem] xl:text-[3.5rem] 2xl:text-[3.8rem]
          leading-[1] tracking-[-0.03em] text-white box-border">
-                        <span className="relative inline-block mr-2">
+                        <span className="relative inline-block mx-2">
                             Get your LEXI Rating
-                            <svg className="absolute left-0 bottom-0 w-full h-6" viewBox="0 0 448 26" fill="none">
+                            <svg className="absolute left-7 sm:left-20 bottom-0 top-5 sm:top-7 xl:top-9 2xl:top-10 w-full h-6" viewBox="0 0 448 26" fill="none">
                                 <motion.path
                                     d="M73.3804 22.8573C166.579 20.3422 259.873 18.2243 352.949 14.802"
                                     stroke="#8247FF"
@@ -61,13 +61,13 @@ export default function CtaSection() {
                             </svg>
                         </span>
                
-                        <span className="relative inline-block">
+                        <span className="relative inline-block mt-1 sm:mt-0">
                             today
                         </span>
                     </h1>
  
                     {/* Subheading */}
-                    <p className="mt-6 text-base mx-12 md:mx-25 md:text-2xl lg:text-base xl:text-xl text-gray-400">
+                    <p className="mt-6  mx-7 text-base sm:text-xl sm:mx-12 md:mx-25 md:text-2xl lg:text-lg lg:mx-35 xl:text-xl xl:mx-30 text-[#99a1ae]">
                     Join over 1,000 small businesses who have improved their cyber insurability with Lexi Ratings
                     </p>
  
