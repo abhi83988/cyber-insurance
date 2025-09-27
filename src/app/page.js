@@ -14,7 +14,7 @@ import Thirdpage from "./components/Thirdpage";
 
 export default function Home() {
   return (
-   <main className="bg-gray-100 min-h-screen">
+   <main className="min-h-screen">
       <Hero/>
       <Header />
       {/* <StatsSection/> */}
