@@ -119,7 +119,7 @@ export default function HowItWorks() {
             className="relative group w-[220px] h-[220px] sm:w-[260px] sm:h-[310px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] xl:w-[250px] xl:h-[320px] 2xl:w-[300px] 2xl:h-[300px] flex-shrink-0 flex flex-col items-center justify-center"
           >
             {/* Card */}
-            <div className="bg-white w-70 h-80 rounded-3xl p-6 flex flex-col items-center text-center sm:w-full sm:h-full ">
+            <div className="bg-white shadow-lg w-70 h-80 rounded-3xl p-6 flex flex-col items-center text-center sm:w-full sm:h-full ">
               <div className="bg-black p-5 rounded-4xl h-31">
                 <div className="mb-4 bg-white p-4 rounded-full">
                   <img src="/Union.svg" alt="question" className="w-12 h-12" />
