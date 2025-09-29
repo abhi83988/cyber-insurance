@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
 
-export default function ButtonSection() {
+export default function ButtonSection({text="Get started"}) {
   const btnRef = useRef(null);
   const textRef = useRef(null);
   const altTextRef = useRef(null);
@@ -60,17 +60,17 @@ export default function ButtonSection() {
   }, []);
 
   return (
-     <div className="h-16 w-full flex items-start justify-start sm: h-2">
+     <div className="h-16 w-full flex items-start justify-start sm:h-2">
       <button
         ref={btnRef}
-        className="relative overflow-hidden bg-[#854bfa] text-white font-medium px-12 py-5 rounded-full h-20 flex items-center justify-center"
+        className="relative overflow-hidden bg-[#854bfa] text-white font-medium px-7 md:px-12 py-2 rounded-full h-15 md:h-20 flex items-center justify-center"
       >
       
-        <span ref={textRef} className="inline-block relative text-lg ">
-          Get started
+        <span ref={textRef} className="inline-block relative text-sm md:base mr-5 md:mr-0 md:text-lg">
+         {text}
         </span>
-        <span ref={altTextRef} className="inline-block relative text-lg">
-          Get started
+        <span ref={altTextRef} className="inline-block relative text-sm md:base mr-5 md:mr-0 md:text-lg">
+          {text}
         </span>
 
      

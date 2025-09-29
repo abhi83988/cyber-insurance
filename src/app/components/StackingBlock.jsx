@@ -99,40 +99,54 @@ const StackingCardsSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-screen overflow-hidden">
+    <section ref={sectionRef} className="relative h-screen overflow-hidden ">
       {cards.map((card, index) => (
         <div
           key={index}
           ref={(el) => (cardRefs.current[index] = el)}
-          className="absolute inset-0 w-full h-screen px-6 py-12"
+          className="absolute inset-0 w-full h-screen px-6 py-12 "
           style={{
             zIndex: index + 1,
             transformOrigin: 'center center',
           }}
         >
           <div
-            className={`${card.bg} rounded-3xl h-full flex flex-col lg:flex-row items-center justify-center gap-6 text-black text-center lg:text-left px-8 py-6 will-change-transform`}
+            className={`${card.bg} rounded-3xl h-full flex flex-col lg:flex-row items-center justify-center gap-6 text-black text-center lg:text-left px-8 py-6 will-change-transform lg:mx-10 xl:mx-15`}
           >
             {/* Alternate image position */}
             {index % 2 === 0 ? (
               <>
-                <div className="w-full lg:w-1/2">
-                  <Image src={card.img} alt={card.title} width={800} height={900} />
+                <div className="w-full lg:w-1/2 flex justify-center items-center">
+                  <Image
+                    src={card.img}
+                    alt={card.title}
+                    width={800}
+                    height={900}
+                    className="w-[300px] sm:w-[400px] md:w-[370px] lg:w-[800px] h-auto rounded-2xl"
+                  />
                 </div>
-                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-4xl md:text-6xl mb-2">{card.title}</h3>
-                  <p className="text-xl xl:text-2xl text-[#737e89]">{card.text}</p>
+
+                <div className="w-full lg:w-1/2">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl mb-2">{card.title}</h3>
+                  <p className="text-xl sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-xl md:mx-15 lg:md:mx-0 text-[#737e89]">{card.text}</p>
                 </div>
               </>
             ) : (
               <>
                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-4xl md:text-6xl mb-2">{card.title}</h3>
-                  <p className="text-xl xl:text-2xl text-[#737e89]">{card.text}</p>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl mb-2">{card.title}</h3>
+                  <p className="text-xl sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-xl md:mx-15 lg:md:mx-0 text-[#737e89]">{card.text}</p>
                 </div>
-                <div className="w-full lg:w-1/2">
-                  <Image src={card.img} alt={card.title} width={800} height={900} />
+                <div className="w-full lg:w-1/2 flex justify-center items-center">
+                  <Image
+                    src={card.img}
+                    alt={card.title}
+                    width={800}
+                    height={900}
+                    className="w-[300px] sm:w-[400px] md:w-[370px] lg:w-[800px] h-auto rounded-2xl"
+                  />
                 </div>
+
               </>
             )}
           </div>

@@ -18,8 +18,13 @@
 }
 
 @keyframes marquee {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -35,6 +40,7 @@
   }
 
 }
+
 @media (min-width:320px) and (max-width: 550px) {
   .hero-heading {
     font-size: 2.5rem !important;
@@ -45,14 +51,26 @@
 
 /* Apply globally */
 body {
-   font-family: 'PPMori', sans-serif;
-background-color:#f5f7fa ;
+  font-family: 'PPMori', sans-serif;
+  background-color: white;
+  overflow-x: hidden;
 }
 
 /* Optional: fallback if Cambon not loaded */
-p, span, h1, h2, h3, h4, h5, h6, a, button, input {
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+input {
   font-family: 'PPMori', sans-serif;
 }
+
 /* ---break---  */
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -91,6 +109,7 @@ p, span, h1, h2, h3, h4, h5, h6, a, button, input {
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+
 /* ---break---  */
 :root {
   --radius: 0.625rem;
@@ -126,6 +145,7 @@ p, span, h1, h2, h3, h4, h5, h6, a, button, input {
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
+
 /* ---break---  */
 .dark {
   --background: oklch(0.145 0 0);
@@ -160,11 +180,13 @@ p, span, h1, h2, h3, h4, h5, h6, a, button, input {
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+
 /* ---break---  */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

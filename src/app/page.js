@@ -11,14 +11,17 @@ import StackingBlocks from "./components/StackingBlock";
 import StatsSection from "./components/StatsSection";
 import Testimonials from "./components/Testimonials";
 import Thirdpage from "./components/Thirdpage";
+import {ThreeCards} from "./components/ThreeCards";
+import UspsSection from "./components/UspsSection";
 
 export default function Home() {
   return (
-   <main className="bg-gray-100 min-h-screen">
+   <main className="min-h-screen">
       <Hero/>
       <Header />
       {/* <StatsSection/> */}
       <CardFees />
+      {/* <UspsSection/> */}
       {/* <Thirdpage /> */}
       {/* <ScrollComponent/> */}
       <HowItWorks />

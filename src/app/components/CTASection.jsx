@@ -1,12 +1,12 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import ButtonSection from "./button";
- 
+import ButtonSection from "./wrapping/AnimateButton";
+
 export default function CtaSection() {
     const containerRef = useRef(null);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
- 
+
     useEffect(() => {
         const handleMouseMove = (e) => {
             if (!containerRef.current) return;
@@ -15,27 +15,27 @@ export default function CtaSection() {
             const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2; // -1 to 1
             setMousePos({ x, y });
         };
- 
+
         const container = containerRef.current;
         container.addEventListener("mousemove", handleMouseMove);
- 
+
         return () => container.removeEventListener("mousemove", handleMouseMove);
     }, []);
- 
+
     return (
         <section
             ref={containerRef}
-            className="relative bg-[#1F2933] py-24 overflow-hidden mx-2 lg:mx-7 2xl:mx-25 rounded-3xl"
+            className="relative bg-[#1F2933] h-110 py-24 overflow-hidden mx-2 lg:mx-7 2xl:mx-25 rounded-3xl"
         >
             {/* Container */}
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto">
                     {/* Heading */}
-                    <h1 className="relative text-[2.5rem] sm:text-[2.8rem] md:text-[2.7rem] lg:text-[3rem] xl:text-[4rem] 2xl:text-[4.6rem]
+                    <h1 className="relative text-[2.1rem] sm:text-[2.5rem] md:text-[2.7rem] lg:text-[2.8rem] xl:text-[3.5rem] 2xl:text-[3.8rem]
          leading-[1] tracking-[-0.03em] text-white box-border">
-                        <span className="relative inline-block mr-2">
+                        <span className="relative inline-block mx-2">
                             Get your LEXI Rating
-                            <svg className="absolute left-0 bottom-0 w-full h-6" viewBox="0 0 448 26" fill="none">
+                            <svg className="absolute left-7 sm:left-20 bottom-0 top-5 sm:top-7 xl:top-9 2xl:top-10 w-full h-6" viewBox="0 0 448 26" fill="none">
                                 <motion.path
                                     d="M73.3804 22.8573C166.579 20.3422 259.873 18.2243 352.949 14.802"
                                     stroke="#8247FF"
@@ -60,25 +60,26 @@ export default function CtaSection() {
                                 />
                             </svg>
                         </span>
-               
-                        <span className="relative inline-block">
+
+                        <span className="relative inline-block mt-1 sm:mt-0">
                             today
                         </span>
                     </h1>
- 
+
                     {/* Subheading */}
-                    <p className="mt-6 text-base mx-12 md:mx-25 md:text-2xl lg:text-base xl:text-xl text-gray-400">
-                    Join over 1,000 small businesses who have improved their cyber insurability with Lexi Ratings
+                    <p className="mt-6  mx-7 text-base sm:text-xl sm:mx-12 md:mx-25 md:text-2xl lg:text-lg lg:mx-35 xl:text-xl xl:mx-30 text-[#99a1ae]">
+                        Join over 1,000 small businesses who have improved their cyber insurability with Lexi Ratings
                     </p>
- 
+
                     {/* Button */}
-                    <div className="mt-5 lg:mt-5 2xl:mt-7">
+                    <div className="flex flex-col justify-self-center gap-3 whitespace-nowrap sm:flex-row justify-center mt-5  lg:mt-5 2xl:mt-7">
                         <ButtonSection text="Get your LEXI Rating" />
- 
+                        <ButtonSection text="Continue where i left"/>
+
                     </div>
                 </div>
             </div>
- 
+
             {/* Circles with mouse movement */}
             {/* 1st circle */}
             <img

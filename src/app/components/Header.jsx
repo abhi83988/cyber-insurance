@@ -66,7 +66,7 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-   <header className="fixed top-0 left-0 w-full bg-white z-50">
+   <header className="fixed top-0 left-0 w-full bg-white z-100">
   <div className="h-16 flex items-center justify-between px-8 md:px-14 2xl:mx-20">
     {/* Logo */}
     <div className="flex items-center">
@@ -74,8 +74,38 @@ export default function Header() {
     </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden lg:flex items-center space-x-7">
           <a
+            href="#products"
+            className="relative text-gray-700  whitespace-nowrap font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+           For Insurers
+          </a>
+          <a
+            href="#products"
+            className="relative text-gray-700  whitespace-nowrap font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+             Become a Security Partner
+          </a>
+          <a
+            href="#products"
+            className="relative text-gray-700  whitespace-nowrap font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+              About Us
+          </a>
+          <a
+            href="#products"
+            className="relative text-gray-700  whitespace-nowrap font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Our Vision
+          </a>
+          <a
+            href="#products"
+            className="relative text-gray-700  whitespace-nowrap font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Contact us
+          </a>
+          {/* <a
             href="#products"
             className="relative text-gray-700 font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
           >
@@ -86,7 +116,7 @@ export default function Header() {
             className="relative text-gray-700 font-medium hover:text-violet-600 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-300 hover:after:w-full"
           >
             Developers
-          </a>
+          </a> */}
           <button
             ref={loginBtnRef}
             className="relative overflow-hidden bg-black text-white font-medium px-6 py-2 rounded-full h-12 flex items-center justify-center"
@@ -103,7 +133,7 @@ export default function Header() {
         {/* Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col justify-center items-center space-y-1.5 w-8 h-8 focus:outline-none"
+          className="lg:hidden flex flex-col justify-center items-center space-y-1.5 w-8 h-8 focus:outline-none"
         >
           <span
             className={`block h-[2px] w-6 bg-black transition-transform duration-300 ${
@@ -121,9 +151,47 @@ export default function Header() {
       {/* Mobile Drawer */}
       <div
         ref={mobileMenuRef}
-        className="md:hidden fixed top-16 left-0 w-full bg-white flex flex-col items-start space-y-4 py-6 px-6 opacity-0 -translate-y-full pointer-events-none"
+        className="lg:hidden fixed top-16 left-0 w-full bg-white flex flex-col items-start space-y-4 py-6 px-6 opacity-0 -translate-y-full pointer-events-none"
       >
+<a
+          href="#"
+          onClick={() => setMenuOpen(false)}
+          className="text-gray-700 font-medium text-base w-full hover:text-violet-600 transition-colors duration-300"
+        >
+          For Insurers
+        </a>
+        
         <a
+          href="#"
+          onClick={() => setMenuOpen(false)}
+          className="text-gray-700 font-medium text-base w-full hover:text-violet-600 transition-colors duration-300"
+        >
+          Become a Security Partner
+        </a>
+        <a
+          href="#"
+          onClick={() => setMenuOpen(false)}
+          className="text-gray-700 font-medium text-base w-full hover:text-violet-600 transition-colors duration-300"
+        >
+           About Us
+        </a>
+        <a
+          href="#"
+          onClick={() => setMenuOpen(false)}
+          className="text-gray-700 font-medium text-base w-full hover:text-violet-600 transition-colors duration-300"
+        >
+          Our Vision
+        </a>
+        <a
+          href="#"
+          onClick={() => setMenuOpen(false)}
+          className="text-gray-700 font-medium text-base w-full hover:text-violet-600 transition-colors duration-300"
+        >
+          Contact us
+        </a>
+
+
+        {/* <a
           href="#products"
           onClick={() => setMenuOpen(false)}
           className="text-gray-700 font-medium text-lg w-full hover:text-violet-600 transition-colors duration-300"
@@ -136,7 +204,7 @@ export default function Header() {
           className="text-gray-700 font-medium text-lg w-full hover:text-violet-600 transition-colors duration-300"
         >
           Developers
-        </a>
+        </a> */}
         <button
           onClick={() => setMenuOpen(false)}
           className="bg-black text-white font-medium px-6 py-2 rounded-full w-full flex items-center justify-center"

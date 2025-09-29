@@ -105,21 +105,21 @@ export default function HowItWorks() {
   }, []);
  
   return (
-    <div className="w-full flex flex-col items-center py-12 bg-[#f5f7fa]">
-      <h2 ref={headingRef} className="text-5xl mb-20 sm:mb-10 lg:text-[4rem] md:text-[2rem]">
+    <div className="w-full flex flex-col items-center py-12">
+      <h2 ref={headingRef} className="text-5xl mb-20 sm:mb-10 md:text-[2.9rem] lg:text-[3.2rem] xl:text-[3.5rem]">
         How It Works
       </h2>
  
       {/* Container */}
-      <div className="flex flex-wrap flex-col sm:flex-row justify-center items-center gap-x-28 gap-y-35 md:grid md:grid-cols-2 md:gap-x-28 md:gap-y-24 lg:flex-row lg:gap-x-28 lg:gap-y-24  xl:flex xl:flex-row xl:gap-22 2xl:gap-x-28 2xl:gap-y-24">
+      <div className="flex flex-wrap flex-col sm:flex-row justify-center items-center gap-x-22 gap-y-35 md:grid md:grid-cols-2 md:gap-x-28 md:gap-y-24 lg:flex-row lg:gap-x-28 lg:gap-y-24  xl:flex xl:flex-row xl:gap-18 2xl:gap-x-18 2xl:gap-y-24">
         {steps.map((step, index) => (
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="relative group w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] xl:w-[250px] xl:h-[320px] 2xl:w-[300px] 2xl:h-[300px] flex-shrink-0 flex flex-col items-center justify-center"
+            className="relative group w-[220px] h-[220px] sm:w-[260px] sm:h-[310px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] xl:w-[250px] xl:h-[320px] 2xl:w-[300px] 2xl:h-[300px] flex-shrink-0 flex flex-col items-center justify-center"
           >
             {/* Card */}
-            <div className="bg-white w-70 h-80 rounded-3xl p-6 flex flex-col items-center text-center sm:w-full sm:h-full ">
+            <div className="bg-white shadow-lg w-70 h-80 rounded-3xl p-6 flex flex-col items-center text-center sm:w-full sm:h-full ">
               <div className="bg-black p-5 rounded-4xl h-31">
                 <div className="mb-4 bg-white p-4 rounded-full">
                   <img src="/Union.svg" alt="question" className="w-12 h-12" />
@@ -134,19 +134,13 @@ export default function HowItWorks() {
             {index < steps.length - 1 && (
               <>
                 {/* Desktop → */}
-                <div className="hidden xl:block absolute top-1/2 -right-[80px] transform -translate-y-1/2">
+                <div className="hidden xl:block absolute top-1/2 -right-[60px] transform -translate-y-1/2">
                   <ArrowSVG direction="right" />
                 </div>
-                {/* Laptop  → */}
-                {/* {index % 2 === 0 && (
-                  <div className="hidden xl:block absolute top-1/2 -right-[80px] transform -translate-y-1/2">
-                    <ArrowSVG direction="right" />
-                  </div>
-                )} */}
  
                 {/* Tablet → */}
                 {index % 2 === 0 && (
-                  <div className="hidden sm:block xl:hidden absolute top-1/2 -right-[80px] transform -translate-y-1/2">
+                  <div className="hidden sm:block xl:hidden absolute top-1/2 -right-[65px] md:-right-[80px] transform -translate-y-1/2">
                     <ArrowSVG direction="right" />
                   </div>
                 )}

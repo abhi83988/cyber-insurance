@@ -66,10 +66,10 @@ export default function ButtonSection({text="Get in touch"}) {
         className="relative overflow-hidden bg-[#854bfa] text-white font-medium px-12 py-5 rounded-full h-20 flex items-center justify-center"
       >
       
-        <span ref={textRef} className="inline-block relative text-lg">
+        <span ref={textRef} className="inline-block relative text-lg whitespace-nowrap">
           {text}
         </span>
-        <span ref={altTextRef} className="inline-block relative text-lg">
+        <span ref={altTextRef} className="inline-block relative text-lg whitespace-nowrap">
           {text}
         </span>
 
