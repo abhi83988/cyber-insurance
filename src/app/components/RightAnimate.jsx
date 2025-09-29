@@ -3,15 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
  
 const heroImages = [
-  { id: "hero-1", src: "/hero-img/hero-1-main.png", width: 250.7, height: 200, top:-2.20, left: 0.15 },
+  { id: "hero-1", src: "/hero-img/hero-1-main.png", width: 200.7, height: 200, top:-2.20, left: 0.15 },
   { id: "hero-1-1", src: "/hero-img/hero-1-logo.png", width:130, height: 50, top: -1.40, left: 0.13, extraClass: "ds-hero" },
-  { id: "hero-2", src: "/hero-img/hero-2-main.png", width:250.7, height: 200, top: -2.60, left: 0.43 },
-  { id: "hero-2-1", src: "/hero-img/hero-2-logo.png", width: 120, height: 60, top: -1.19, left: 0.45, extraClass: "ds-hero" },
-  { id: "hero-3", src: "/hero-img/hero-3-main.png", width: 250.7, height: 200, top: -1.45, left: 0.70 },
+  { id: "hero-2", src: "/hero-img/hero-2-main.png", width:200.7, height: 200, top: -2.60, left: 0.43 },
+  { id: "hero-2-1", src: "/hero-img/hero-2-logo.png", width: 120, height: 60, top: -1.3, left: 0.45, extraClass: "ds-hero" },
+  { id: "hero-3", src: "/hero-img/hero-3-main.png", width: 200.7, height: 200, top: -1.45, left: 0.70 },
   { id: "hero-3-1", src: "/hero-img/hero-3-logo.png", width: 59, height: 62, top: -0.10, left: 0.70, extraClass: "ds-hero" },
-  { id: "hero-4", src: "/hero-img/hero-4-main.png", width: 250.7, height: 200, top: 0.25, left: 0.25 },
-  { id: "hero-4-1", src: "/hero-img/hero-4-logo.png", width: 59, height: 62, top: 0.87, left: 0.47, extraClass: "ds-hero" },
-  { id: "hero-5", src: "/hero-img/hero-5-main.png", width: 195.7, height: 200, top: 0.65, left: 0.65 },
+  { id: "hero-4", src: "/hero-img/hero-4-main.png", width: 220.7, height: 200, top: 0.25, left: 0.25 },
+  // { id: "hero-4-1", src: "/hero-img/hero-4-logo.png", width: 59, height: 62, top: 0.87, left: 0.47, extraClass: "ds-hero" },
+  { id: "hero-5", src: "/hero-img/hero-5-main.png", width: 200.7, height: 200, top: 0.65, left: 0.65 },
 ];
  
 // Positions + width/height per breakpoint

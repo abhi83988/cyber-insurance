@@ -275,7 +275,7 @@ export default function CardFees() {
                 className="image sm:w-55 sm:h-60 md:sm:w-35 md:h-50 lg:w-55 lg:h-70 xl:w-55 xl:h-80 z-10 transform -translate-y-15"
               />
             </div>
-            <div className='xl:ml-90 2xl:ml-0'>
+            <div className='lg:mr-7 xl:ml-90 2xl:ml-0'>
               <ButtonSection />
             </div>
           </div>
