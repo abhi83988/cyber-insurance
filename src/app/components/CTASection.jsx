@@ -25,7 +25,7 @@ export default function CtaSection() {
     return (
         <section
             ref={containerRef}
-            className="relative bg-[#1F2933] h-110 py-24 overflow-hidden mx-2 lg:mx-7 2xl:mx-25 rounded-3xl"
+            className="relative bg-[#1F2933] sm:h-110 py-24 overflow-hidden mx-2 lg:mx-7 2xl:mx-25 rounded-3xl"
         >
             {/* Container */}
             <div className="container mx-auto px-4 relative z-10">

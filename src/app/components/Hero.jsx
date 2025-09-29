@@ -121,7 +121,7 @@ const Hero = () => {
  
  
             {/* Button */}
-            <div className="flex flex-row sm:-space-x-55 md:-space-x-70 lg:-space-x-0 xl:-space-x-30 2xl:-space-x-45">
+            <div className="flex flex-row whitespace-nowrap sm:-space-x-55 md:-space-x-70 lg:-space-x-0 xl:-space-x-30 2xl:-space-x-45">
             <ButtonSection />
             <ButtonSection text="Continue"/>
 
