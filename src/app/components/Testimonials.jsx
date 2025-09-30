@@ -49,9 +49,9 @@ export default function Testimonials() {
           </div>
 
           {/* Backed by cybersecurity */}
-          <div className="flex items-center gap-2">
-            <ShieldCheckIcon className="h-5 w-5 text-green-600" />
-            <p className="text-lg text-gray-600">
+          <div className="flex items-center gap-2 max-w-xs sm:max-w-none text-center sm:text-left">
+            <ShieldCheckIcon className="shrink-0 h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-green-600" />
+            <p className="text-xs sm:text-sm md:text-lg text-gray-600">
               Backed by cybersecurity and insurance experts
             </p>
           </div>
