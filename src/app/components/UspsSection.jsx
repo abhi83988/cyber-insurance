@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 import ButtonSection from "./button";
+import { CircleCheckBigIcon, BlendIcon, BoltIcon} from './icons/BringToFrontIcon'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -151,12 +152,13 @@ export default function UspsSection() {
         </div>
 
         {/* Cards Grid - Mobile/Tablet */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:hidden">
           {/* Card 1 */}
           <div className="relative aspect-square bg-[#F1D9D0] rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col justify-between">
             <div className="relative flex flex-col justify-end items-start mb-3 flex-1">
-              <div className="bg-deep rounded-full w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 relative top-6 sm:top-8 md:top-10 left-6 sm:left-8 md:left-10 scale-[1.077]"></div>
-              <div className="backdrop-blur-md bg-[#1f293333] rounded-b-[300px] w-[10em] sm:w-[12em] md:w-[14em] h-[5em] sm:h-[6em] md:h-[7em] -rotate-[23.65deg] relative scale-[0.88]"></div>
+              <CircleCheckBigIcon size={90} className="text-black" />
+              {/* <div className="bg-deep rounded-full w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 relative top-6 sm:top-8 md:top-10 left-6 sm:left-8 md:left-10 scale-[1.077]"></div>
+              <div className="backdrop-blur-md bg-[#1f293333] rounded-b-[300px] w-[10em] sm:w-[12em] md:w-[14em] h-[5em] sm:h-[6em] md:h-[7em] -rotate-[23.65deg] relative scale-[0.88]"></div> */}
             </div>
             <div className="z-10 relative">
               <h3 className="text-[1.1rem] sm:text-[1.3rem] md:text-[1.5rem] font-normal leading-[1.3] mb-1.5 sm:mb-2 text-black">Balance</h3>
@@ -169,8 +171,9 @@ export default function UspsSection() {
           {/* Card 2 */}
           <div className="relative aspect-square bg-[#F1D9D0] rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col justify-between">
             <div className="flex flex-col justify-end items-start relative mb-3 flex-1">
-              <div className="bg-deep rounded-full w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 relative top-6 sm:top-8 md:top-10 left-6 sm:left-8 md:left-10 scale-[1.13]"></div>
-              <div className="bg-[#1f293333] rounded-full w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 relative scale-[0.87] backdrop-blur-md"></div>
+                <BlendIcon size={90} className="text-black" />
+              {/* <div className="bg-deep rounded-full w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 relative top-6 sm:top-8 md:top-10 left-6 sm:left-8 md:left-10 scale-[1.13]"></div>
+              <div className="bg-[#1f293333] rounded-full w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 relative scale-[0.87] backdrop-blur-md"></div> */}
             </div>
             <div className="z-10 relative">
               <h3 className="text-[1.1rem] sm:text-[1.3rem] md:text-[1.5rem] font-normal leading-[1.3] mb-1.5 sm:mb-2 text-black">Transactions</h3>
@@ -183,8 +186,9 @@ export default function UspsSection() {
           {/* Card 3 */}
           <div className="relative aspect-square bg-[#F1D9D0] rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col justify-between sm:col-span-2 md:col-span-1">
             <div className="relative flex flex-col justify-end items-start mb-3 flex-1">
-              <div className="absolute top-[20%] left-[8%] w-[6em] sm:w-[7em] md:w-[8em] h-[4.5em] sm:h-[5.25em] md:h-[6em] bg-[url('https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e60db5e8930fbe4b2eabab_bank-details.s… bg-cover z-20"></div>
-              <div className="relative w-[6em] sm:w-[7em] md:w-[8em] h-[4.5em] sm:h-[5.25em] md:h-[6em] bg-[#1f293333] backdrop-blur-md z-10"></div>
+               <BoltIcon size={90} className="text-black" />
+              {/* <div className="absolute top-[20%] left-[8%] w-[6em] sm:w-[7em] md:w-[8em] h-[4.5em] sm:h-[5.25em] md:h-[6em] bg-[url('https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e60db5e8930fbe4b2eabab_bank-details.s… bg-cover z-20"></div>
+              <div className="relative w-[6em] sm:w-[7em] md:w-[8em] h-[4.5em] sm:h-[5.25em] md:h-[6em] bg-[#1f293333] backdrop-blur-md z-10"></div> */}
             </div>
             <div className="z-10 relative">
               <h3 className="text-[1.1rem] sm:text-[1.3rem] md:text-[1.5rem] font-normal leading-[1.3] mb-1.5 sm:mb-2 text-black">Bank account details</h3>
@@ -197,7 +201,7 @@ export default function UspsSection() {
       </div>
 
       {/* Desktop Layout (lg and above) - With Animations */}
-      <div className="hidden lg:flex lg:flex-col xl:flex-row xl:items-start xl:space-x-8">
+      <div className="hidden md:flex md:flex-col lg:flex-row xl:flex-row xl:items-start xl:space-x-8">
         {/* Left Section */}
         <div className="flex flex-col items-start lg:w-full xl:w-1/3 mb-8 xl:mb-0">
           <h1 className="relative text-[2.8rem] lg:text-[3.2rem] xl:text-[3.7rem] 2xl:text-[4.6rem] font-normal leading-[1] tracking-[-0.03em] text-black whitespace-nowrap box-border">
@@ -237,15 +241,16 @@ export default function UspsSection() {
         </div>
 
         {/* Right Section: Cards with Animations */}
-        <div className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-4 xl:flex xl:flex-row xl:space-x-4 space-y-6 lg:space-y-0 xl:space-y-0 lg:w-full xl:w-2/3">
+        <div className="flex flex-col md:flex md:flex-row xl:space-x-4 space-y-6 lg:space-y-0 xl:space-y-0 lg:w-full xl:w-2/3">
           {/* Card 1 */}
           <div
             ref={addToRefs}
             className="relative flex flex-col justify-between border-0 border-black bg-[#F1D9D0] rounded-2xl p-8 lg:p-6 xl:p-8 2xl:p-10 w-full transform origin-[100%] lg:aspect-square xl:aspect-auto xl:h-auto lg:-rotate-[6deg] lg:scale-[0.85] xl:scale-[1]"
           >
             <div className="relative flex flex-col justify-end items-start mb-4 lg:flex-1 xl:flex-none">
-              <div className="bg-deep rounded-full w-20 h-20 lg:w-16 lg:h-16 xl:w-24 xl:h-24 relative top-10 lg:top-8 xl:top-12 left-10 lg:left-8 xl:left-12 scale-[1.077]"></div>
-              <div className="backdrop-blur-md bg-[#1f293333] rounded-b-[300px] w-[14em] lg:w-[12em] xl:w-[16.88em] h-[7em] lg:h-[6em] xl:h-[8.44em] -rotate-[23.65deg] relative scale-[0.88]"></div>
+               <CircleCheckBigIcon className="text-black w-16 sm:w-20 md:w-24 lg:w-28" />
+              {/* <div className="bg-deep rounded-full w-20 h-20 lg:w-16 lg:h-16 xl:w-24 xl:h-24 relative top-10 lg:top-8 xl:top-12 left-10 lg:left-8 xl:left-12 scale-[1.077]"></div> */}
+              {/* <div className="backdrop-blur-md bg-[#1f293333] rounded-b-[300px] w-[14em] lg:w-[12em] xl:w-[16.88em] h-[7em] lg:h-[6em] xl:h-[8.44em] -rotate-[23.65deg] relative scale-[0.88]"></div> */}
             </div>
             <div className="lg:z-10 lg:relative">
               <h3 className="text-[1.8em] lg:text-[1.4em] xl:text-[2em] 2xl:text-[2.63em] font-normal leading-[1.3] mb-2.5 text-black">33%</h3>
@@ -261,8 +266,10 @@ export default function UspsSection() {
             className="relative flex flex-col justify-between border-0 border-black bg-[#F1D9D0] rounded-2xl p-8 lg:p-6 xl:p-8 2xl:p-10 w-full transform origin-[50%] lg:aspect-square xl:aspect-auto xl:h-auto lg:rotate-[0deg] lg:scale-[0.9] xl:scale-[1]"
           >
             <div className="flex flex-col justify-end items-start relative mb-4 lg:flex-1 xl:flex-none">
-              <div className="bg-deep rounded-full w-20 h-20 lg:w-16 lg:h-16 xl:w-24 xl:h-24 relative top-10 lg:top-8 xl:top-12 left-10 lg:left-8 xl:left-12 scale-[1.13]"></div>
-              <div className="bg-[#1f293333] rounded-full w-20 h-20 lg:w-16 lg:h-16 xl:w-24 xl:h-24 relative scale-[0.87] backdrop-blur-md"></div>
+              {/* <img src="/Group.png" alt="Group.png" className="text-black w-200"/> */}
+              <BlendIcon className="text-black w-16 sm:w-20 md:w-24 lg:w-28"/>
+              {/* <div className="bg-deep rounded-full w-20 h-20 lg:w-16 lg:h-16 xl:w-24 xl:h-24 relative top-10 lg:top-8 xl:top-12 left-10 lg:left-8 xl:left-12 scale-[1.13]"></div>
+              <div className="bg-[#1f293333] rounded-full w-20 h-20 lg:w-16 lg:h-16 xl:w-24 xl:h-24 relative scale-[0.87] backdrop-blur-md"></div> */}
             </div>
             <div className="lg:z-10 lg:relative">
               <h3 className="text-[1.8em] lg:text-[1.4em] xl:text-[2em] 2xl:text-[2.63em] font-normal leading-[1.3] mb-2.5 text-black">43%</h3>
@@ -278,8 +285,9 @@ export default function UspsSection() {
             className="relative flex flex-col justify-between border-0 border-black bg-[#F1D9D0] rounded-2xl p-8 lg:p-6 xl:p-8 2xl:p-10 w-full transform origin-[0%] lg:aspect-square xl:aspect-auto rotate-[5deg] lg:scale-[0.95] xl:scale-[1] xl:h-[28em] 2xl:h-[30em]"
           >
             <div className="relative flex flex-col justify-end items-start mb-4 lg:flex-1 xl:flex-none">
-              <div className="absolute top-[16%] left-[6%] w-[8em] lg:w-[7em] xl:w-[10em] h-[6em] lg:h-[5.25em] xl:h-[7.5em] bg-[url('https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e60db5e8930fbe4b2eabab_bank-details.s… bg-cover z-20"></div>
-              <div className="relative w-[8em] lg:w-[7em] xl:w-[10em] h-[6em] lg:h-[5.25em] xl:h-[7.5em] bg-[#1f293333] backdrop-blur-md z-10"></div>
+              <BoltIcon className="text-black w-16 sm:w-20 md:w-24 lg:w-28"/>
+              {/* <div className="absolute top-[16%] left-[6%] w-[8em] lg:w-[7em] xl:w-[10em] h-[6em] lg:h-[5.25em] xl:h-[7.5em] bg-[url('https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/63e60db5e8930fbe4b2eabab_bank-details.s… bg-cover z-20"></div>
+              <div className="relative w-[8em] lg:w-[7em] xl:w-[10em] h-[6em] lg:h-[5.25em] xl:h-[7.5em] bg-[#1f293333] backdrop-blur-md z-10"></div> */}
             </div>
             <div className="lg:z-10 lg:relative">
               <h3 className="text-[1.8em] lg:text-[1.4em] xl:text-[2em] 2xl:text-[2.63em] font-normal leading-[1.3] mb-2.5 text-black">60%</h3>
