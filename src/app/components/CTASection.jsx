@@ -35,7 +35,7 @@ export default function CtaSection() {
          leading-[1] tracking-[-0.03em] text-white box-border">
                         <span className="relative inline-block mx-2">
                             Get your LEXI Rating
-                            <svg className="absolute left-7 sm:left-20 bottom-0 top-5 sm:top-7 xl:top-9 2xl:top-10 w-full h-6" viewBox="0 0 448 26" fill="none">
+                            <svg className="absolute left-7 sm:left-20 bottom-0 top-5 sm:top-7 xl:top-9 2xl:top-12 w-full h-6" viewBox="0 0 448 26" fill="none">
                                 <motion.path
                                     d="M73.3804 22.8573C166.579 20.3422 259.873 18.2243 352.949 14.802"
                                     stroke="#8247FF"

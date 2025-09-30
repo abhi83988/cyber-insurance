@@ -4,7 +4,7 @@ import Lenis from 'lenis';
 export default function LenisProvider({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1,
       easing: (t) => t,
       smooth: true,
     });

@@ -183,7 +183,7 @@ export default function CardFees() {
             />
           </div>
         </div>
-        <div className="flex-1 sm:h-[600px] h-[400px] overflow-hidden relative align-self-end w-200 top-20 -left-10 sm:top-40 md:w-95 md:top-50 lg:w-125 lg:top-50 xl:w-166 xl:top-55 2xl:w-230 2xl:-left-60">
+        <div className="flex-1 sm:h-[600px] h-[400px] overflow-hidden relative align-self-end w-200 top-25 -left-10 sm:top-40 md:w-95 md:top-50 lg:w-125 lg:top-50 xl:w-166 xl:top-55 2xl:w-230 2xl:-left-60">
           <Marquee
             gradient={false}
             speed={130}

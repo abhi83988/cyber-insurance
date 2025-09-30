@@ -4,19 +4,20 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/63ef7ea26fd458cf9230e5aa_PPMori-Regular.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'Theinhardt';
+  src: url('/fonts/Theinhardt-Regular.18c88f92.woff2') format('woff2'),
+       url('/fonts/Theinhardt-Regular.18c88f92.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/63ef7ea269d5501c4ab5ee08_PPMori-SemiBold.woff2') format('woff2');
-  font-weight: 600;
+  font-family: 'Cambon';
+  src: url('/fonts/Cambon-Regular.woff2') format('woff2'),
+       url('/fonts/Cambon-Regular.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
 }
-
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -51,7 +52,7 @@
 
 /* Apply globally */
 body {
-  font-family: 'PPMori', sans-serif;
+   font-family:  Cambon, Theinhardt, Arial, Helvetica, sans-serif !important;
   background-color: white;
   overflow-x: hidden;
 }
@@ -68,7 +69,7 @@ h6,
 a,
 button,
 input {
-  font-family: 'PPMori', sans-serif;
+    font-family: Cambon, Theinhardt, Arial, Helvetica, sans-serif !important;
 }
 
 /* ---break---  */

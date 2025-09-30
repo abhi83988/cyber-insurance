@@ -21,7 +21,7 @@ export default function Home() {
       <Header />
       {/* <StatsSection/> */}
       <CardFees />
-      {/* <UspsSection/> */}
+      <UspsSection/>
       {/* <Thirdpage /> */}
       {/* <ScrollComponent/> */}
       <HowItWorks />
