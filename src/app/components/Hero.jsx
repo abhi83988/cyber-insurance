@@ -121,7 +121,7 @@ const Hero = () => {
  
  
             {/* Button */}
-            <div className="flex flex-row whitespace-nowrap sm:-space-x-60 md:-space-x-80 lg:-space-x-10 xl:-space-x-30 2xl:-space-x-95 [@media(min-width:1536px)_and_(max-width:1850px)]:-space-x-45">
+            <div className="flex flex-row whitespace-nowrap sm:-space-x-60 md:-space-x-80 lg:-space-x-10 xl:-space-x-30 2xl:-space-x-95 [@media(min-width:1536px)_and_(max-width:1850px)]:-space-x-45 [@media(min-width:400px)_and_(max-width:475px)]:-space-x-15 [@media(min-width:480px)_and_(max-width:635px)]:-space-x-35">
             <ButtonSection />
             <ButtonSection text="Continue"/>
 
