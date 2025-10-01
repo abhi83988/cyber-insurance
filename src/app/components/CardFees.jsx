@@ -213,7 +213,7 @@ export default function CardFees() {
 
           <div className="sm:ml-0 lg:ml-0 xl:ml-10 ">
             <h1
-              className="relative text-[2rem] sm:text-[2.8rem] md:text-[1.8rem] lg:text-[2.4rem] xl:text-[2.8rem] 2xl:text-[3.3rem]
+              className="relative text-[2rem] sm:text-[2.8rem] md:text-[2rem] lg:text-[2.4rem] xl:text-[2.8rem] 2xl:text-[3.3rem]
                max-[1254px]:text-[2.2rem] max-[1096px]:text-[2rem] max-[768px]:text-[1.8rem]
                font-normal leading-[1] tracking-[-0.03em] sm:tracking-[-0.04em] md:tracking-[-0.05em]
                text-white whitespace-nowrap box-border"

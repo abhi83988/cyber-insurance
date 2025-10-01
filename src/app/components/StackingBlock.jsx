@@ -111,7 +111,7 @@ const StackingCardsSection = () => {
           }}
         >
           <div
-            className={`${card.bg} rounded-3xl h-full flex flex-col lg:flex-row items-center justify-center gap-6 text-black text-center lg:text-left px-8 py-6 will-change-transform lg:mx-10 xl:mx-15`}
+            className={`${card.bg} rounded-4xl h-full flex flex-col lg:flex-row items-center justify-center gap-6 text-black text-center lg:text-left px-8 py-6 will-change-transform lg:mx-5 xl:mx-5 2xl:mx-15`}
           >
             {/* Alternate image position */}
             {index % 2 === 0 ? (
@@ -122,20 +122,20 @@ const StackingCardsSection = () => {
                     alt={card.title}
                     width={800}
                     height={900}
-                    className="w-[300px] sm:w-[400px] md:w-[370px] lg:w-[800px] h-auto rounded-2xl"
+                    className="w-[300px] sm:w-[500px] md:w-[600px] lg:w-[800px] h-auto rounded-2xl"
                   />
                 </div>
 
                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl mb-2">{card.title}</h3>
-                  <p className="text-xl sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-xl md:mx-15 lg:md:mx-0 text-[#737e89]">{card.text}</p>
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl mb-2">{card.title}</h3>
+                  <p className="text-xl sm:text-xl md:text-2xl lg:text-lg xl:text-xl 2xl:text-xl md:mx-15 lg:md:mx-0 text-[#737e89]">{card.text}</p>
                 </div>
               </>
             ) : (
               <>
                 <div className="w-full lg:w-1/2">
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl mb-2">{card.title}</h3>
-                  <p className="text-xl sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-xl md:mx-15 lg:md:mx-0 text-[#737e89]">{card.text}</p>
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl mb-2">{card.title}</h3>
+                  <p className="text-xl sm:text-xl md:text-2xl lg:text-lg xl:text-xl 2xl:text-xl md:mx-15 lg:md:mx-0 text-[#737e89]">{card.text}</p>
                 </div>
                 <div className="w-full lg:w-1/2 flex justify-center items-center">
                   <Image
@@ -143,7 +143,7 @@ const StackingCardsSection = () => {
                     alt={card.title}
                     width={800}
                     height={900}
-                    className="w-[300px] sm:w-[400px] md:w-[370px] lg:w-[800px] h-auto rounded-2xl"
+                    className="w-[300px] sm:w-[500px] md:w-[600px] lg:w-[800px] h-auto rounded-2xl"
                   />
                 </div>
 

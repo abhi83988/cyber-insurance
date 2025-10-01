@@ -27,7 +27,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 mx-2 md:mx-6 lg:mx-7 xl:mx-5 2xl:mx-20">
       <div className="max-w-6xl mx-auto text-center px-4">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl text-gray-800 mb-6 lg:text-[4rem]">
