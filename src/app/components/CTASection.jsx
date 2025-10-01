@@ -31,7 +31,7 @@ export default function CtaSection() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto">
                     {/* Heading */}
-                    <h1 className="relative text-[2.1rem] sm:text-[2.5rem] md:text-[2.7rem] lg:text-[2.8rem] xl:text-[3.5rem] 2xl:text-[3.8rem]
+                    <h1 className="relative text-[2.1rem] sm:text-[2.5rem] md:text-[2.7rem] lg:text-[2.8rem] xl:text-[3rem] 2xl:text-[3.8rem]
          leading-[1] tracking-[-0.03em] text-white box-border">
                         <span className="relative inline-block mx-2">
                             Get your LEXI Rating

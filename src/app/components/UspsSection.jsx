@@ -121,7 +121,7 @@ export default function UspsSection() {
   ];
  
   return (
-    <div className="relative mx-3 md:mx-6 lg:mx-7 2xl:mx-18 my-40 bg-[#DFC9C0] rounded-4xl p-8 sm:p-12 lg:p-16 2xl:px-35 flex flex-col md:flex-row md:items-start md:space-x-8">
+    <div className="relative mx-3 md:mx-6 lg:mx-7 2xl:mx-18 my-40 bg-[#DFC9C0] rounded-4xl p-8 sm:p-12 lg:p-16 xl:px-20 2xl:px-35 flex flex-col md:flex-row md:items-start md:space-x-8">
       {/* Header Section */}
       <div className="flex flex-col gap-5 md:gap-10 items-start ml-5 md:ml-0 lg:w-200 mb-8 lg:mb-0">
         <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[2.8rem] lg:text-[2.7rem] xl:text-[2.8rem] 2xl:text-[3.2rem] leading-tight text-black mb-4">
@@ -149,13 +149,13 @@ export default function UspsSection() {
       </div>
  
       {/* Desktop animated cards */}
-      <div className="hidden md:flex md:flex-row md:space-x-6 md:w-200 md:-translate-x-30 lg:w-150 lg:-translate-x-0  xl:w-180 2xl:w-240 [@media(min-width:1536px)_and_(max-width:1815px)_and_(max-height:900px)_and_(min-height:900px)]:w-[700px]
+      <div className="hidden md:flex md:flex-row md:space-x-6 md:w-200 md:-translate-x-30 lg:w-150 lg:-translate-x-0  xl:w-170 2xl:w-240 [@media(min-width:1536px)_and_(max-width:1815px)_and_(max-height:900px)_and_(min-height:900px)]:w-[700px]
       [@media(min-width:1536px)_and_(max-width:1815px)_and_(max-height:689px)_and_(min-height:689px)]:w-[650px]">
         {cardData.map((card, i) => (
           <div
             ref={addToRefs}
             key={i}
-            className="bg-[#F1D9D0]  text-[#1D2C3C] p-6 rounded-2xl shadow-xl my-5 md:w-43 lg:w-80 xl:h-70 xl:w-100 2xl:h-60 2xl:w-80"
+            className="bg-[#F1D9D0]  text-[#1D2C3C] p-6 rounded-2xl shadow-xl my-5 md:w-43 lg:w-80 xl:h-70 xl:w-150 2xl:h-60 2xl:w-80"
           >
             <div className="absolute top-7 left-4">{card.icon}</div>
             <h3 className="text-2xl font-semibold mb-2 mt-20 2xl:text-3xl">{card.title}</h3>

@@ -79,7 +79,7 @@ const Hero = () => {
             >
            
               with{" "}
-              <span className="relative inline-block text-[2.8rem] md:text-[3.5rem]  lg:text-[3.3rem] xl:text-[4.9rem]">
+              <span className="relative inline-block text-[2.8rem] md:text-[3.5rem]  lg:text-[3.3rem] xl:text-[4.2rem] 2xl:text-[4.9rem]">
                 Lexi Rating
                 <span className="text-[0.3em] relative top-[-1.3em]">™</span>
                 <svg
