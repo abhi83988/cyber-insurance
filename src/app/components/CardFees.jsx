@@ -115,7 +115,7 @@ export default function CardFees() {
     <div className="min-h-222 sm:min-h-220 md:min-h-200 bg-[#0C1B28] h-100 text-white flex items-evenly justify-center rounded-4xl px-8 py-16 abhusection overflow-hidden mx-2 md:mx-6 lg:mx-7 2xl:mx-20">
       <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-12">
         {/* Mobile Version */}
-        <div className="flex flex-col block md:hidden justify-between h-full relative">
+        <div className="flex flex-col block md:hidden justify-between h-full relative bg-amber-600align-self-start">
 
           <div>
             <h1
@@ -166,9 +166,11 @@ export default function CardFees() {
             <p className="text-[1rem] text-white mb-8 mt-7">
               Lexi Rating™ evaluates cyber risk posture and translates it into a score that insurers understand. It benchmarks SMEs against industry norms, using data on security practices, controls, incident history, and resilience. You can use your Rating & Insurability report to negotiate better premiums, and minimize the risk of denial of coverage.
             </p>
-            <button className="bg-[#854bfa] hover:bg-purple-700 text-white py-3 px-6 rounded-full text-lg transition ">
-              Get in touch →
-            </button>
+            
+            <div className='justify-self-start'>
+
+            <ButtonSection />
+            </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 top-80 sm:top-65 flex flex-row justify-center space-x-0 z-10 ml-50 -translate-x-10">
             <img

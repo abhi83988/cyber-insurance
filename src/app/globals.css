@@ -58,7 +58,10 @@ body {
 }
 
 /* Optional: fallback if Cambon not loaded */
-p,
+p{
+
+   font-family: Theinhardt, Arial, Helvetica, sans-serif !important;
+}
 span,
 h1,
 h2,
