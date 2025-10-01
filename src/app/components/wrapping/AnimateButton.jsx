@@ -63,7 +63,7 @@ export default function ButtonSection({text="Get started"}) {
      <div className="h-16 w-full flex items-start justify-start sm:h-2">
       <button
         ref={btnRef}
-        className="relative overflow-hidden bg-[#854bfa] text-white font-medium px-6 py-2 md:px-7 rounded-full h-15 md:h-18 flex items-center justify-center"
+        className="relative overflow-hidden bg-[#854bfa] text-white font-medium px-6 py-2 md:px-7 rounded-full h-15 md:h-16 flex items-center justify-center"
       >
       
         <span ref={textRef} className="inline-block relative text-sm mr-5 md:mr-5 pb-1 md:text-lg">

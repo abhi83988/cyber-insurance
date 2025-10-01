@@ -149,7 +149,8 @@ export default function UspsSection() {
       </div>
  
       {/* Desktop animated cards */}
-      <div className="hidden md:flex md:flex-row md:space-x-6 md:w-200 md:-translate-x-30 lg:w-150 lg:-translate-x-0  xl:w-180 2xl:w-240">
+      <div className="hidden md:flex md:flex-row md:space-x-6 md:w-200 md:-translate-x-30 lg:w-150 lg:-translate-x-0  xl:w-180 2xl:w-240 [@media(min-width:1536px)_and_(max-width:1815px)_and_(max-height:900px)_and_(min-height:900px)]:w-[700px]
+      [@media(min-width:1536px)_and_(max-width:1815px)_and_(max-height:689px)_and_(min-height:689px)]:w-[650px]">
         {cardData.map((card, i) => (
           <div
             ref={addToRefs}
