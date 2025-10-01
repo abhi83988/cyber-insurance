@@ -106,7 +106,7 @@ export default function HowItWorks() {
  
   return (
     <div className="w-full flex flex-col items-center py-12">
-      <h2 ref={headingRef} className="text-5xl mb-20 sm:mb-10 md:text-[2.9rem] lg:text-[3.2rem] xl:text-[3.5rem]">
+      <h2 ref={headingRef} className="text-5xl mb-20 sm:mb-10 md:text-[2.9rem] lg:text-[3.2rem] xl:text-[3.5rem] text-center">
         How It Works
       </h2>
  
